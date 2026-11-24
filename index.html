@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -112,134 +112,221 @@
   <section id="how-i-work">
     <p class="eyebrow">How I work</p>
     <h2 class="section-title">The project delivery lifecycle</h2>
-    <p class="section-lede">I work through the same six phases on every project, with traceability running through all of them. Select a phase to see what I do in it, why, and where it shows up in my work.</p>
+    <p class="section-lede">Six phases on every project, with traceability running through all of them. Select a phase to see my process and the evidence behind it.</p>
     <div class="lifecycle" data-lifecycle>
       <div class="lc-tabs" role="tablist" aria-label="Project delivery lifecycle">
-        <button class="lc-card" role="tab" id="lc-tab-initiation" aria-controls="lc-initiation" aria-selected="true"><span class="lc-num">01</span><span class="lc-name">Initiation</span><span class="lc-q">What's the problem?</span></button>
-        <button class="lc-card" role="tab" id="lc-tab-planning" aria-controls="lc-planning" aria-selected="false" tabindex="-1"><span class="lc-num">02</span><span class="lc-name">Planning</span><span class="lc-q">What does the solution need to achieve?</span></button>
-        <button class="lc-card" role="tab" id="lc-tab-design" aria-controls="lc-design" aria-selected="false" tabindex="-1"><span class="lc-num">03</span><span class="lc-name">Design</span><span class="lc-q">How will it actually work?</span></button>
-        <button class="lc-card" role="tab" id="lc-tab-delivery" aria-controls="lc-delivery" aria-selected="false" tabindex="-1"><span class="lc-num">04</span><span class="lc-name">Delivery</span><span class="lc-q">Build it</span></button>
-        <button class="lc-card" role="tab" id="lc-tab-uat" aria-controls="lc-uat" aria-selected="false" tabindex="-1"><span class="lc-num">05</span><span class="lc-name">UAT</span><span class="lc-q">Verify it</span></button>
-        <button class="lc-card" role="tab" id="lc-tab-benefits" aria-controls="lc-benefits" aria-selected="false" tabindex="-1"><span class="lc-num">06</span><span class="lc-name">Benefits</span><span class="lc-q">Did it deliver?</span></button>
-        <button class="lc-card lc-trace" role="tab" id="lc-tab-traceability" aria-controls="lc-traceability" aria-selected="false" tabindex="-1"><span class="lc-name">Traceability</span><span class="lc-q">Runs through every phase</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-initiation" aria-controls="lc-initiation" aria-selected="true"><span class="lc-badge">01</span><span class="lc-text"><span class="lc-name">Initiation</span><span class="lc-q">What's the problem?</span></span></button>
+        <button class="lc-card" role="tab" id="lc-tab-planning" aria-controls="lc-planning" aria-selected="false" tabindex="-1"><span class="lc-badge">02</span><span class="lc-text"><span class="lc-name">Planning</span><span class="lc-q">What does the solution need to achieve?</span></span></button>
+        <button class="lc-card" role="tab" id="lc-tab-design" aria-controls="lc-design" aria-selected="false" tabindex="-1"><span class="lc-badge">03</span><span class="lc-text"><span class="lc-name">Design</span><span class="lc-q">How will it actually work?</span></span></button>
+        <button class="lc-card" role="tab" id="lc-tab-delivery" aria-controls="lc-delivery" aria-selected="false" tabindex="-1"><span class="lc-badge">04</span><span class="lc-text"><span class="lc-name">Delivery</span><span class="lc-q">Build it</span></span></button>
+        <button class="lc-card" role="tab" id="lc-tab-uat" aria-controls="lc-uat" aria-selected="false" tabindex="-1"><span class="lc-badge">05</span><span class="lc-text"><span class="lc-name">UAT</span><span class="lc-q">Verify it</span></span></button>
+        <button class="lc-card" role="tab" id="lc-tab-benefits" aria-controls="lc-benefits" aria-selected="false" tabindex="-1"><span class="lc-badge">06</span><span class="lc-text"><span class="lc-name">Benefits</span><span class="lc-q">Did it deliver?</span></span></button>
+        <button class="lc-card lc-trace" role="tab" id="lc-tab-traceability" aria-controls="lc-traceability" aria-selected="false" tabindex="-1"><span class="lc-badge"><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><span class="lc-text"><span class="lc-name">Traceability</span><span class="lc-q">Runs through every phase</span></span></button>
       <div class="lc-panel" id="lc-initiation" role="tabpanel" aria-labelledby="lc-tab-initiation">
-        <div class="lc-head"><span class="lc-num">01</span><h3>Initiation</h3><span class="lc-q">What's the problem?</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Work in a deliberate order: stakeholders, then current state, then issues and opportunities, then the problem statement, and only then high-level requirements</li><li>Write the problem as problem, impact and outcome, backed by evidence, with no solution in it</li><li>Rate stakeholders on influence, interest and impact, not everyone as "high", and choose an engagement approach for each</li><li>Surface the trade-offs early, such as cost against capability, rather than hiding them or resolving them too soon</li><li>Play findings back to stakeholders before formalising, and log assumptions, open questions and decisions needed later</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>If Initiation is weak, everything after it wobbles: scope creeps, stakeholders disagree and requirements conflict. Even when leadership has already chosen the direction, the BA adds value by pinning down the problem, the impacts and measurable outcomes, so later decisions rest on evidence, not opinion.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="caldwell.html#stakeholders"><b>CRM transformation</b><span>The client had already shortlisted three CRMs. Before comparing them, I set out five evidenced business concerns and rated stakeholders in four distinct groups rather than marking everyone high, which surfaced an unconsulted technical owner as an integration risk.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="radio-ramadan.html#discovery"><b>Radio Ramadan</b><span>Trello was already in use, so the question was how to make it work, not what to buy. I recorded which details stakeholders had confirmed, and kept a column of open questions to confirm against every user story.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">Stakeholder analysis</span><span class="chip">Influence and interest grid</span><span class="chip">Current state discovery</span><span class="chip">Problem statement</span><span class="chip">Assumptions and decisions log</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">01</span><div><h3>Initiation</h3><p class="lc-short">What's the problem?</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.6 3.5 2.7 3.5 5.5"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Map stakeholders</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Discover the current state</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5"/><path d="M12 17.5h.01"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Find issues and opportunities</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Frame the problem</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Set outcomes and scope</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Define the problem properly before anything is built, so every later decision rests on evidence.</p></div>
+          <div class="lc-stat"><b>5</b><span>evidenced business concerns set out before any CRM was compared</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="caldwell.html#stakeholders"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.6 3.5 2.7 3.5 5.5"/></svg></span><span class="lc-proof-t"><b>Stakeholder grid</b><span>CRM · four engagement groups</span></span></a>
+          <a class="lc-proof-item" href="caldwell.html#business-case"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><span class="lc-proof-t"><b>Business case</b><span>CRM · three options, one pick</span></span></a>
+          <a class="lc-proof-item" href="radio-ramadan.html#discovery"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><span class="lc-proof-t"><b>Discovery</b><span>Radio Ramadan · 7 stages, 5 roles</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">Stakeholder analysis</span><span class="chip">Influence and interest grid</span><span class="chip">Current state discovery</span><span class="chip">Problem statement</span><span class="chip">Assumptions and decisions log</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">If Initiation is weak, everything after it wobbles: scope creeps, stakeholders disagree and requirements conflict. Even when leadership has already chosen the direction, the BA adds value by pinning down the problem, the impacts and measurable outcomes, so later decisions rest on evidence, not opinion.</p>
+            <ul class="ticks"><li>Work in a deliberate order: stakeholders, then current state, then issues and opportunities, then the problem statement, and only then high-level requirements</li><li>Write the problem as problem, impact and outcome, backed by evidence, with no solution in it</li><li>Rate stakeholders on influence, interest and impact, not everyone as "high", and choose an engagement approach for each</li><li>Surface the trade-offs early, such as cost against capability, rather than hiding them or resolving them too soon</li><li>Play findings back to stakeholders before formalising, and log assumptions, open questions and decisions needed later</li></ul>
+            <p class="lc-ex"><b>CRM transformation:</b> The client had already shortlisted three CRMs. Before comparing them, I set out five evidenced business concerns and rated stakeholders in four distinct groups rather than marking everyone high, which surfaced an unconsulted technical owner as an integration risk. <a href="caldwell.html#stakeholders">See it →</a></p>
+            <p class="lc-ex"><b>Radio Ramadan:</b> Trello was already in use, so the question was how to make it work, not what to buy. I recorded which details stakeholders had confirmed, and kept a column of open questions to confirm against every user story. <a href="radio-ramadan.html#discovery">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-planning" role="tabpanel" aria-labelledby="lc-tab-planning" hidden>
-        <div class="lc-head"><span class="lc-num">02</span><h3>Planning</h3><span class="lc-q">What does the solution need to achieve?</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Model the current processes in detail, including the manual hand-offs and workarounds</li><li>Set the future state beside the current state and name the gaps between them</li><li>Walk the future journey and ask, at each step, what must be true for it to work safely and well</li><li>Assess the impact on each group, such as customers, operations and compliance, before any design starts</li><li>Turn those findings into stakeholder requirements that trace back to the business need</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>If Initiation makes the problem clear, Planning makes the change clear. Stakeholder requirements aren't brainstormed; they come out of the gap analysis, the journey and the impact work. Skip that, and design becomes guesswork and operational impacts get missed.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="caldwell.html#as-is"><b>CRM transformation</b><span>The as-is map showed each enquiry being keyed into a spreadsheet twice, and that three of the four end points were lost sales. Those were the gaps the future state had to close.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="radio-ramadan.html#to-be"><b>Radio Ramadan</b><span>I kept the team's existing Trello stages and added only what the gaps called for, such as a brief-complete check and recorded approvals, so the change stayed proportionate to the problem.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">BPMN swimlanes</span><span class="chip">Gap analysis</span><span class="chip">Journey mapping</span><span class="chip">Impact assessment</span><span class="chip">Stakeholder requirements</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">02</span><div><h3>Planning</h3><p class="lc-short">What does the solution need to achieve?</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="15" width="6" height="5" rx="1"/><path d="M6 9v4.5h12V15"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Model current processes</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="7" height="14" rx="1"/><rect x="14" y="5" width="7" height="14" rx="1"/><path d="M10 12h4"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Compare future and current</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Walk the future journey</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-5"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Assess the impact</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Write stakeholder needs</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Make the change clear. Stakeholder needs come out of analysis, not a brainstorm.</p></div>
+          <div class="lc-stat"><b>3 of 4</b><span>process end points were lost sales in the CRM as-is map</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="caldwell.html#as-is"><span class="lc-thumb"><img src="assets/thumbs/crm-as-is.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>As-is sales process</b><span>CRM · BPMN swimlane</span></span></a>
+          <a class="lc-proof-item" href="radio-ramadan.html#as-is"><span class="lc-thumb"><img src="assets/thumbs/rr-as-is.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>As-is advertising process</b><span>Radio Ramadan · BPMN swimlane</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">BPMN swimlanes</span><span class="chip">Gap analysis</span><span class="chip">Journey mapping</span><span class="chip">Impact assessment</span><span class="chip">Stakeholder requirements</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">If Initiation makes the problem clear, Planning makes the change clear. Stakeholder requirements aren't brainstormed; they come out of the gap analysis, the journey and the impact work. Skip that, and design becomes guesswork and operational impacts get missed.</p>
+            <ul class="ticks"><li>Model the current processes in detail, including the manual hand-offs and workarounds</li><li>Set the future state beside the current state and name the gaps between them</li><li>Walk the future journey and ask, at each step, what must be true for it to work safely and well</li><li>Assess the impact on each group, such as customers, operations and compliance, before any design starts</li><li>Turn those findings into stakeholder requirements that trace back to the business need</li></ul>
+            <p class="lc-ex"><b>CRM transformation:</b> The as-is map showed each enquiry being keyed into a spreadsheet twice, and that three of the four end points were lost sales. Those were the gaps the future state had to close. <a href="caldwell.html#as-is">See it →</a></p>
+            <p class="lc-ex"><b>Radio Ramadan:</b> I kept the team's existing Trello stages and added only what the gaps called for, such as a brief-complete check and recorded approvals, so the change stayed proportionate to the problem. <a href="radio-ramadan.html#to-be">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-design" role="tabpanel" aria-labelledby="lc-tab-design" hidden>
-        <div class="lc-head"><span class="lc-num">03</span><h3>Design</h3><span class="lc-q">How will it actually work?</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Model the future-state processes first, including what happens when things fail</li><li>Analyse each step: what must the system do for this step to work?</li><li>Group those behaviours into functional requirements that can each be built and tested on their own</li><li>Keep business rules (thresholds, limits, policies) separate from the requirements they govern</li><li>Add non-functional requirements and wireframes, and work out what the organisation must do to be ready</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>Requirements that aren't grounded in an agreed process are guesswork, and they get rewritten every time a workshop changes something. I keep business rules separate because they change faster than capabilities: when a limit changes, one rule is updated, not every requirement.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="radio-ramadan.html#to-be"><b>Radio Ramadan</b><span>The to-be process covers the failure loops (incomplete briefs, rejected scripts, client changes), and the confirmed business rules (30-second adverts, five-minute breaks, two-manager sign-off) are recorded as distinct rules that the stories reference.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="caldwell.html#wireframes"><b>CRM transformation</b><span>Thirteen wireframes covered the customer journey, a use case diagram spanned four capability areas, and seven non-functional requirements covered scale and integration. I flagged that the non-functional requirements still needed measurable criteria.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">To-be BPMN</span><span class="chip">UML use cases</span><span class="chip">Functional requirements</span><span class="chip">Business rules</span><span class="chip">Non-functional requirements</span><span class="chip">Wireframing</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">03</span><div><h3>Design</h3><p class="lc-short">How will it actually work?</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="15" width="6" height="5" rx="1"/><path d="M6 9v4.5h12V15"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Model future processes</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Ask what the system must do</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Group into requirements</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Separate business rules</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Wireframe and NFRs</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Turn stakeholder needs into a blueprint the team can build from with confidence.</p></div>
+          <div class="lc-stat"><b>13</b><span>wireframes covering the customer journey</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="radio-ramadan.html#to-be"><span class="lc-thumb"><img src="assets/thumbs/rr-to-be.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>To-be process with controls</b><span>Radio Ramadan · BPMN</span></span></a>
+          <a class="lc-proof-item" href="caldwell.html#wireframes"><span class="lc-thumb"><img src="assets/thumbs/crm-wireframe.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>Wireframes</b><span>CRM · 13 screens</span></span></a>
+          <a class="lc-proof-item" href="caldwell.html#to-be"><span class="lc-thumb"><img src="assets/thumbs/crm-use-case.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>Use case diagram</b><span>CRM · UML</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">To-be BPMN</span><span class="chip">UML use cases</span><span class="chip">Functional requirements</span><span class="chip">Business rules</span><span class="chip">Non-functional requirements</span><span class="chip">Wireframing</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">Requirements that aren't grounded in an agreed process are guesswork, and they get rewritten every time a workshop changes something. I keep business rules separate because they change faster than capabilities: when a limit changes, one rule is updated, not every requirement.</p>
+            <ul class="ticks"><li>Model the future-state processes first, including what happens when things fail</li><li>Analyse each step: what must the system do for this step to work?</li><li>Group those behaviours into functional requirements that can each be built and tested on their own</li><li>Keep business rules (thresholds, limits, policies) separate from the requirements they govern</li><li>Add non-functional requirements and wireframes, and work out what the organisation must do to be ready</li></ul>
+            <p class="lc-ex"><b>Radio Ramadan:</b> The to-be process covers the failure loops (incomplete briefs, rejected scripts, client changes), and the confirmed business rules (30-second adverts, five-minute breaks, two-manager sign-off) are recorded as distinct rules that the stories reference. <a href="radio-ramadan.html#to-be">See it →</a></p>
+            <p class="lc-ex"><b>CRM transformation:</b> Thirteen wireframes covered the customer journey, a use case diagram spanned four capability areas, and seven non-functional requirements covered scale and integration. I flagged that the non-functional requirements still needed measurable criteria. <a href="caldwell.html#wireframes">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-delivery" role="tabpanel" aria-labelledby="lc-tab-delivery" hidden>
-        <div class="lc-head"><span class="lc-num">04</span><h3>Delivery</h3><span class="lc-q">Build it</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Build the backlog from the design outputs, not from a blank page</li><li>Take the persona and outcome from the stakeholder need, and the capability from the grouped requirements</li><li>Write Given/When/Then acceptance criteria covering the happy path, business rules, failure paths, edge cases and side effects</li><li>Check stories are genuinely ready before sizing, and treat every developer question as a possible gap in the criteria</li><li>Track organisational readiness (communications, training, procedures) alongside the build, with owners and dates</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>A story is only useful if a developer can build it and a tester can test it without needing a meeting. And a perfect build can still fail at go-live if the organisation isn't ready, so readiness is tracked from the first sprint, not the last.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="radio-ramadan.html#stories"><b>Radio Ramadan</b><span>Nineteen stories with the confirmed business rules written into the acceptance criteria, each listing the stories it depends on, plus a Trello prototype that shows the owner, status and next action on every booking.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="caldwell.html#requirements"><b>CRM transformation</b><span>Nine stories across three epics, each written for a real user group, from sales staff to finance, with criteria specific enough to test.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">User stories</span><span class="chip">Given/When/Then</span><span class="chip">Backlog</span><span class="chip">Definition of Ready</span><span class="chip">Change and readiness tracking</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">04</span><div><h3>Delivery</h3><p class="lc-short">Build it</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Build the backlog from design</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Persona from the need</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Given/When/Then criteria</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 6h10M11 12h10M11 18h10"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Ready before sizing</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4h3l7 5V5L6 10z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Track readiness alongside</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Stories a developer can build and a tester can test, without needing a meeting.</p></div>
+          <div class="lc-stat"><b>19</b><span>user stories with the business rules written into the criteria</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="radio-ramadan.html#prototype"><span class="lc-thumb"><img src="assets/thumbs/rr-trello.png" alt="" loading="lazy"></span><span class="lc-proof-t"><b>Trello workflow prototype</b><span>Radio Ramadan · 7-stage board</span></span></a>
+          <a class="lc-proof-item" href="radio-ramadan.html#stories"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span><span class="lc-proof-t"><b>User stories</b><span>Radio Ramadan · 19 across 3 epics</span></span></a>
+          <a class="lc-proof-item" href="caldwell.html#requirements"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span><span class="lc-proof-t"><b>User stories</b><span>CRM · 9 across 3 epics</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">User stories</span><span class="chip">Given/When/Then</span><span class="chip">Backlog</span><span class="chip">Definition of Ready</span><span class="chip">Change and readiness tracking</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">A story is only useful if a developer can build it and a tester can test it without needing a meeting. And a perfect build can still fail at go-live if the organisation isn't ready, so readiness is tracked from the first sprint, not the last.</p>
+            <ul class="ticks"><li>Build the backlog from the design outputs, not from a blank page</li><li>Take the persona and outcome from the stakeholder need, and the capability from the grouped requirements</li><li>Write Given/When/Then acceptance criteria covering the happy path, business rules, failure paths, edge cases and side effects</li><li>Check stories are genuinely ready before sizing, and treat every developer question as a possible gap in the criteria</li><li>Track organisational readiness (communications, training, procedures) alongside the build, with owners and dates</li></ul>
+            <p class="lc-ex"><b>Radio Ramadan:</b> Nineteen stories with the confirmed business rules written into the acceptance criteria, each listing the stories it depends on, plus a Trello prototype that shows the owner, status and next action on every booking. <a href="radio-ramadan.html#stories">See it →</a></p>
+            <p class="lc-ex"><b>CRM transformation:</b> Nine stories across three epics, each written for a real user group, from sales staff to finance, with criteria specific enough to test. <a href="caldwell.html#requirements">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-uat" role="tabpanel" aria-labelledby="lc-tab-uat" hidden>
-        <div class="lc-head"><span class="lc-num">05</span><h3>UAT</h3><span class="lc-q">Verify it</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Plan UAT during design, starting with a test plan: scope, entry and exit criteria, roles and defect process</li><li>Derive every test case from an acceptance criterion and keep the link</li><li>Cover negative and boundary conditions, where the real defects tend to hide</li><li>Triage each defect: is it genuine, or a new requirement that belongs in change control?</li><li>Close with a summary report and written sign-off, with owners and dates for anything conditional</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>UAT is the business confirming that this is what it asked for. A weak UAT means a weak sign-off, and risk goes live with the solution. Because every test traces to a criterion, the testing is structured and defensible, not exploratory.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="caldwell.html#uat"><b>CRM transformation</b><span>I recorded 35 UAT outcomes against individual acceptance criteria (27 passed) and logged a mismatch between the test count and the catalogue as a handover action, rather than hiding it.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="radio-ramadan.html#tests"><b>Radio Ramadan</b><span>Fourteen scenarios, each traced to the stories it proves, typed as positive, negative, boundary or control, including tests that stop an advert from being scheduled before the client approves it.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">UAT test plan</span><span class="chip">Test cases</span><span class="chip">Negative and boundary testing</span><span class="chip">Defect triage</span><span class="chip">Sign-off</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">05</span><div><h3>UAT</h3><p class="lc-short">Verify it</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4"/><path d="M9 11h6M9 15h4"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Test plan first</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Trace each test to a criterion</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Test negatives and boundaries</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="8" width="10" height="12" rx="5"/><path d="M12 8V5M9 5l1.5 2M15 5l-1.5 2M3 13h4M17 13h4M4 18l3-1M20 18l-3-1M4 8l3 2M20 8l-3 2"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Triage every defect</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Report and sign off</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Prove the business got what it asked for, with evidence rather than opinion.</p></div>
+          <div class="lc-stat"><b>27 / 35</b><span class="lc-bar" role="img" aria-label="27 passed, 8 failed"><span style="width:77.1%"></span></span><span>UAT tests passed, with every gap logged openly</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="caldwell.html#uat"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg></span><span class="lc-proof-t"><b>UAT results by criterion</b><span>CRM · pass and fail per requirement</span></span></a>
+          <a class="lc-proof-item" href="radio-ramadan.html#tests"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="lc-proof-t"><b>14 test scenarios</b><span>Radio Ramadan · traced to stories</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">UAT test plan</span><span class="chip">Test cases</span><span class="chip">Negative and boundary testing</span><span class="chip">Defect triage</span><span class="chip">Sign-off</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">UAT is the business confirming that this is what it asked for. A weak UAT means a weak sign-off, and risk goes live with the solution. Because every test traces to a criterion, the testing is structured and defensible, not exploratory.</p>
+            <ul class="ticks"><li>Plan UAT during design, starting with a test plan: scope, entry and exit criteria, roles and defect process</li><li>Derive every test case from an acceptance criterion and keep the link</li><li>Cover negative and boundary conditions, where the real defects tend to hide</li><li>Triage each defect: is it genuine, or a new requirement that belongs in change control?</li><li>Close with a summary report and written sign-off, with owners and dates for anything conditional</li></ul>
+            <p class="lc-ex"><b>CRM transformation:</b> I recorded 35 UAT outcomes against individual acceptance criteria (27 passed) and logged a mismatch between the test count and the catalogue as a handover action, rather than hiding it. <a href="caldwell.html#uat">See it →</a></p>
+            <p class="lc-ex"><b>Radio Ramadan:</b> Fourteen scenarios, each traced to the stories it proves, typed as positive, negative, boundary or control, including tests that stop an advert from being scheduled before the client approves it. <a href="radio-ramadan.html#tests">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-benefits" role="tabpanel" aria-labelledby="lc-tab-benefits" hidden>
-        <div class="lc-head"><span class="lc-num">06</span><h3>Benefits</h3><span class="lc-q">Did it deliver?</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Ask "how will we know this worked?" from Initiation onwards, not just at the end</li><li>Define each benefit with a baseline, a target, a measurement method, a data source, a named owner and a reporting cadence</li><li>Record results honestly: "on track" is not "achieved", and an early warning is a useful signal, not a failure</li><li>Hand over one to one, confirming each owner can actually get the data, not just that they agreed in a meeting</li><li>Account for every deliverable, and capture lessons that are specific enough to act on</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>Most BAs move on at go-live and never find out whether the project worked. Closing the loop answers the question the project started with. A measurement plan without named owners is just decoration.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="caldwell.html#handover"><b>CRM transformation</b><span>The end report shows each objective as achieved or still in progress, treats the 18% revenue uplift as a target to track rather than a result, and hands six open actions to the in-house team.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="radio-ramadan.html#handover"><b>Radio Ramadan</b><span>I closed the analysis without claiming any unmeasured benefits, proposed baseline measures for a pilot, and wrote lessons as actions, such as agreeing a business owner and the required fields before piloting.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">Benefits measurement plan</span><span class="chip">Benefits tracking</span><span class="chip">Ownership handover</span><span class="chip">Lessons learned</span><span class="chip">Closure summary</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge">06</span><div><h3>Benefits</h3><p class="lc-short">Did it deliver?</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7v.5"/><path d="M12 17h.01"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">How will we know it worked?</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Baseline and target</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">A named owner</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Track results honestly</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h12"/><path d="m12 7 5 5-5 5"/><path d="M20 5v14"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Hand over and learn</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Close the loop: did the change solve the problem the project started with?</p></div>
+          <div class="lc-stat"><b>6</b><span>open actions handed to the in-house team, each with a proposed owner</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="caldwell.html#handover"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h12"/><path d="m12 7 5 5-5 5"/><path d="M20 5v14"/></svg></span><span class="lc-proof-t"><b>Handover and lessons</b><span>CRM · end report and Jira board</span></span></a>
+          <a class="lc-proof-item" href="radio-ramadan.html#handover"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="lc-proof-t"><b>Handover and lessons</b><span>Radio Ramadan · actions and baselines</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">Benefits measurement plan</span><span class="chip">Benefits tracking</span><span class="chip">Ownership handover</span><span class="chip">Lessons learned</span><span class="chip">Closure summary</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">Most BAs move on at go-live and never find out whether the project worked. Closing the loop answers the question the project started with. A measurement plan without named owners is just decoration.</p>
+            <ul class="ticks"><li>Ask "how will we know this worked?" from Initiation onwards, not just at the end</li><li>Define each benefit with a baseline, a target, a measurement method, a data source, a named owner and a reporting cadence</li><li>Record results honestly: "on track" is not "achieved", and an early warning is a useful signal, not a failure</li><li>Hand over one to one, confirming each owner can actually get the data, not just that they agreed in a meeting</li><li>Account for every deliverable, and capture lessons that are specific enough to act on</li></ul>
+            <p class="lc-ex"><b>CRM transformation:</b> The end report shows each objective as achieved or still in progress, treats the 18% revenue uplift as a target to track rather than a result, and hands six open actions to the in-house team. <a href="caldwell.html#handover">See it →</a></p>
+            <p class="lc-ex"><b>Radio Ramadan:</b> I closed the analysis without claiming any unmeasured benefits, proposed baseline measures for a pilot, and wrote lessons as actions, such as agreeing a business owner and the required fields before piloting. <a href="radio-ramadan.html#handover">See it →</a></p>
+          </div>
+        </details>
       </div>
       <div class="lc-panel" id="lc-traceability" role="tabpanel" aria-labelledby="lc-tab-traceability" hidden>
-        <div class="lc-head"><h3>Traceability</h3><span class="lc-q">Runs through every phase</span></div>
-        <div class="lc-body">
-          <div>
-            <h4>What I do</h4>
-            <ul class="ticks"><li>Keep one chain: business requirement, then stakeholder requirement, then functional requirement, then story, then test</li><li>Give every item a consistent ID and link each one to what it came from</li><li>Check for orphans: no requirement without a source, and no business need without coverage</li><li>Use the links to assess the impact of any change</li></ul>
-            <div class="callout lc-why"><b>Why it matters</b><p>Traceability proves that no objective was left unsupported and that no requirement is random. When something changes, I can see straight away what else it affects. At sign-off, I can show that every need was built and tested.</p></div>
-          </div>
-          <div>
-            <h4>From my projects</h4>
-            <a class="lc-ex" href="radio-ramadan.html#tests"><b>Radio Ramadan</b><span>Every test lists the stories it proves; for example, TC-14 traces to stories 2.6, 3.1 and 3.2. Every story maps to a use case.</span><em>See it in the case study →</em></a>
-            <a class="lc-ex" href="caldwell.html#uat"><b>CRM transformation</b><span>Each acceptance criterion in the requirements catalogue carries its own UAT result, so gaps are visible line by line.</span><em>See it in the case study →</em></a>
-            <h4>Techniques</h4>
-            <div class="skills"><span class="chip">Requirements traceability</span><span class="chip">Impact analysis</span><span class="chip">Consistent IDs</span></div>
-          </div>
+        <div class="lc-head"><span class="lc-badge"><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><div><h3>Traceability</h3><p class="lc-short">Runs through every phase</p></div></div>
+        <p class="lc-label">My process</p>
+        <ol class="lc-steps">
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Business need</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.6 3.5 2.7 3.5 5.5"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Stakeholder need</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Requirement</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">User story</span></li>
+          <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Test</span></li>
+        </ol>
+        <div class="lc-mid">
+          <div class="lc-why"><span class="lc-label">Why it matters</span><p>Every test proves a story, every story delivers a requirement, every requirement serves a business need.</p></div>
+          <div class="lc-stat"><b>TC-14</b><span>traces to stories 2.6, 3.1 and 3.2 in Radio Ramadan</span></div>
         </div>
+        <p class="lc-label">Evidence from my projects</p>
+        <div class="lc-proof">
+          <a class="lc-proof-item" href="radio-ramadan.html#tests"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><span class="lc-proof-t"><b>Test scenarios</b><span>Radio Ramadan · story IDs on every test</span></span></a>
+          <a class="lc-proof-item" href="caldwell.html#uat"><span class="lc-thumb lc-thumb-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg></span><span class="lc-proof-t"><b>Requirements catalogue</b><span>CRM · UAT result per criterion</span></span></a>
+        </div>
+        <div class="lc-foot"><div class="skills"><span class="chip">Requirements traceability</span><span class="chip">Impact analysis</span><span class="chip">Consistent IDs</span></div></div>
+        <details class="lc-more"><summary>How I do this, in detail</summary>
+          <div class="lc-more-body">
+            <p class="lc-why-long">Traceability proves that no objective was left unsupported and that no requirement is random. When something changes, I can see straight away what else it affects. At sign-off, I can show that every need was built and tested.</p>
+            <ul class="ticks"><li>Keep one chain: business requirement, then stakeholder requirement, then functional requirement, then story, then test</li><li>Give every item a consistent ID and link each one to what it came from</li><li>Check for orphans: no requirement without a source, and no business need without coverage</li><li>Use the links to assess the impact of any change</li></ul>
+            <p class="lc-ex"><b>Radio Ramadan:</b> Every test lists the stories it proves; for example, TC-14 traces to stories 2.6, 3.1 and 3.2. Every story maps to a use case. <a href="radio-ramadan.html#tests">See it →</a></p>
+            <p class="lc-ex"><b>CRM transformation:</b> Each acceptance criterion in the requirements catalogue carries its own UAT result, so gaps are visible line by line. <a href="caldwell.html#uat">See it →</a></p>
+          </div>
+        </details>
       </div>
       </div>
     </div>
@@ -269,6 +356,6 @@
     <span><a href="https://www.linkedin.com/in/akhans">LinkedIn</a> · <a href="resume.html">Resume</a></span>
   </div>
 </footer>
-<script src="main.js"></script>
+<script src="main.js?v=3"></script>
 </body>
 </html>
