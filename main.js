@@ -85,3 +85,53 @@ document.querySelectorAll('.filters').forEach(group => {
   }, { rootMargin: '-40% 0px -55% 0px' });
   map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
 })();
+
+// Project delivery lifecycle: clickable phases with a breakdown panel
+document.querySelectorAll('[data-lifecycle]').forEach(lc => {
+  const list = lc.querySelector('.lc-tabs');
+  const tabs = [...lc.querySelectorAll('[role="tab"]')];
+  const panelOf = t => document.getElementById(t.getAttribute('aria-controls'));
+  const mq = window.matchMedia('(max-width: 720px)');
+
+  function place() {
+    const t = tabs.find(x => x.getAttribute('aria-selected') === 'true');
+    const p = panelOf(t);
+    if (mq.matches) t.after(p); else list.appendChild(p);
+  }
+  function select(t, focus) {
+    tabs.forEach(x => {
+      const on = x === t;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      panelOf(x).hidden = !on;
+    });
+    place();
+    if (focus) t.focus();
+    if (mq.matches) t.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      const n = tabs.length;
+      const j = { ArrowRight: (i + 1) % n, ArrowDown: (i + 1) % n, ArrowLeft: (i - 1 + n) % n, ArrowUp: (i - 1 + n) % n, Home: 0, End: n - 1 }[e.key];
+      if (j !== undefined) { e.preventDefault(); select(tabs[j], true); }
+    });
+  });
+  if (mq.addEventListener) mq.addEventListener('change', place);
+  place();
+
+  // Deep links such as index.html#lc-design open that phase
+  const fromHash = () => {
+    const t = tabs.find(x => '#' + x.getAttribute('aria-controls') === location.hash);
+    if (!t) return;
+    select(t);
+    // Run after the browser's own jump to the anchor, then bring the phase cards into view
+    setTimeout(() => {
+      const target = mq.matches ? t : list;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 90, behavior: 'instant' });
+    }, 50);
+  };
+  window.addEventListener('hashchange', fromHash);
+  if (document.readyState === 'complete') fromHash();
+  else window.addEventListener('load', fromHash);
+});

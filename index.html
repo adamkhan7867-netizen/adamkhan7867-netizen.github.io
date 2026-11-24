@@ -109,15 +109,139 @@
     </div>
   </section>
 
-  <section>
+  <section id="how-i-work">
     <p class="eyebrow">How I work</p>
-    <h2 class="section-title">The same five steps on every project</h2>
-    <div class="steps">
-      <div class="step"><h4>Discover</h4><p>Stakeholder analysis, interviews and the documents people already use.</p></div>
-      <div class="step"><h4>Model</h4><p>As-is and to-be BPMN swimlanes and UML use cases that show where work stalls.</p></div>
-      <div class="step"><h4>Decide</h4><p>A business case that compares real options and makes one recommendation.</p></div>
-      <div class="step"><h4>Define</h4><p>User stories with acceptance criteria, MoSCoW priorities and traceability.</p></div>
-      <div class="step"><h4>Prove and hand over</h4><p>UAT scenarios traced to stories, an end-of-project report and an open-actions log.</p></div>
+    <h2 class="section-title">The project delivery lifecycle</h2>
+    <p class="section-lede">I work through the same six phases on every project, with traceability running through all of them. Select a phase to see what I do in it, why, and where it shows up in my work.</p>
+    <div class="lifecycle" data-lifecycle>
+      <div class="lc-tabs" role="tablist" aria-label="Project delivery lifecycle">
+        <button class="lc-card" role="tab" id="lc-tab-initiation" aria-controls="lc-initiation" aria-selected="true"><span class="lc-num">01</span><span class="lc-name">Initiation</span><span class="lc-q">What's the problem?</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-planning" aria-controls="lc-planning" aria-selected="false" tabindex="-1"><span class="lc-num">02</span><span class="lc-name">Planning</span><span class="lc-q">What does the solution need to achieve?</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-design" aria-controls="lc-design" aria-selected="false" tabindex="-1"><span class="lc-num">03</span><span class="lc-name">Design</span><span class="lc-q">How will it actually work?</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-delivery" aria-controls="lc-delivery" aria-selected="false" tabindex="-1"><span class="lc-num">04</span><span class="lc-name">Delivery</span><span class="lc-q">Build it</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-uat" aria-controls="lc-uat" aria-selected="false" tabindex="-1"><span class="lc-num">05</span><span class="lc-name">UAT</span><span class="lc-q">Verify it</span></button>
+        <button class="lc-card" role="tab" id="lc-tab-benefits" aria-controls="lc-benefits" aria-selected="false" tabindex="-1"><span class="lc-num">06</span><span class="lc-name">Benefits</span><span class="lc-q">Did it deliver?</span></button>
+        <button class="lc-card lc-trace" role="tab" id="lc-tab-traceability" aria-controls="lc-traceability" aria-selected="false" tabindex="-1"><span class="lc-name">Traceability</span><span class="lc-q">Runs through every phase</span></button>
+      <div class="lc-panel" id="lc-initiation" role="tabpanel" aria-labelledby="lc-tab-initiation">
+        <div class="lc-head"><span class="lc-num">01</span><h3>Initiation</h3><span class="lc-q">What's the problem?</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Work in a deliberate order: stakeholders, then current state, then issues and opportunities, then the problem statement, and only then high-level requirements</li><li>Write the problem as problem, impact and outcome, backed by evidence, with no solution in it</li><li>Rate stakeholders on influence, interest and impact, not everyone as "high", and choose an engagement approach for each</li><li>Surface the trade-offs early, such as cost against capability, rather than hiding them or resolving them too soon</li><li>Play findings back to stakeholders before formalising, and log assumptions, open questions and decisions needed later</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>If Initiation is weak, everything after it wobbles: scope creeps, stakeholders disagree and requirements conflict. Even when leadership has already chosen the direction, the BA adds value by pinning down the problem, the impacts and measurable outcomes, so later decisions rest on evidence, not opinion.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="caldwell.html#stakeholders"><b>CRM transformation</b><span>The client had already shortlisted three CRMs. Before comparing them, I set out five evidenced business concerns and rated stakeholders in four distinct groups rather than marking everyone high, which surfaced an unconsulted technical owner as an integration risk.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="radio-ramadan.html#discovery"><b>Radio Ramadan</b><span>Trello was already in use, so the question was how to make it work, not what to buy. I recorded which details stakeholders had confirmed, and kept a column of open questions to confirm against every user story.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">Stakeholder analysis</span><span class="chip">Influence and interest grid</span><span class="chip">Current state discovery</span><span class="chip">Problem statement</span><span class="chip">Assumptions and decisions log</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-planning" role="tabpanel" aria-labelledby="lc-tab-planning" hidden>
+        <div class="lc-head"><span class="lc-num">02</span><h3>Planning</h3><span class="lc-q">What does the solution need to achieve?</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Model the current processes in detail, including the manual hand-offs and workarounds</li><li>Set the future state beside the current state and name the gaps between them</li><li>Walk the future journey and ask, at each step, what must be true for it to work safely and well</li><li>Assess the impact on each group, such as customers, operations and compliance, before any design starts</li><li>Turn those findings into stakeholder requirements that trace back to the business need</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>If Initiation makes the problem clear, Planning makes the change clear. Stakeholder requirements aren't brainstormed; they come out of the gap analysis, the journey and the impact work. Skip that, and design becomes guesswork and operational impacts get missed.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="caldwell.html#as-is"><b>CRM transformation</b><span>The as-is map showed each enquiry being keyed into a spreadsheet twice, and that three of the four end points were lost sales. Those were the gaps the future state had to close.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="radio-ramadan.html#to-be"><b>Radio Ramadan</b><span>I kept the team's existing Trello stages and added only what the gaps called for, such as a brief-complete check and recorded approvals, so the change stayed proportionate to the problem.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">BPMN swimlanes</span><span class="chip">Gap analysis</span><span class="chip">Journey mapping</span><span class="chip">Impact assessment</span><span class="chip">Stakeholder requirements</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-design" role="tabpanel" aria-labelledby="lc-tab-design" hidden>
+        <div class="lc-head"><span class="lc-num">03</span><h3>Design</h3><span class="lc-q">How will it actually work?</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Model the future-state processes first, including what happens when things fail</li><li>Analyse each step: what must the system do for this step to work?</li><li>Group those behaviours into functional requirements that can each be built and tested on their own</li><li>Keep business rules (thresholds, limits, policies) separate from the requirements they govern</li><li>Add non-functional requirements and wireframes, and work out what the organisation must do to be ready</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>Requirements that aren't grounded in an agreed process are guesswork, and they get rewritten every time a workshop changes something. I keep business rules separate because they change faster than capabilities: when a limit changes, one rule is updated, not every requirement.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="radio-ramadan.html#to-be"><b>Radio Ramadan</b><span>The to-be process covers the failure loops (incomplete briefs, rejected scripts, client changes), and the confirmed business rules (30-second adverts, five-minute breaks, two-manager sign-off) are recorded as distinct rules that the stories reference.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="caldwell.html#wireframes"><b>CRM transformation</b><span>Thirteen wireframes covered the customer journey, a use case diagram spanned four capability areas, and seven non-functional requirements covered scale and integration. I flagged that the non-functional requirements still needed measurable criteria.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">To-be BPMN</span><span class="chip">UML use cases</span><span class="chip">Functional requirements</span><span class="chip">Business rules</span><span class="chip">Non-functional requirements</span><span class="chip">Wireframing</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-delivery" role="tabpanel" aria-labelledby="lc-tab-delivery" hidden>
+        <div class="lc-head"><span class="lc-num">04</span><h3>Delivery</h3><span class="lc-q">Build it</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Build the backlog from the design outputs, not from a blank page</li><li>Take the persona and outcome from the stakeholder need, and the capability from the grouped requirements</li><li>Write Given/When/Then acceptance criteria covering the happy path, business rules, failure paths, edge cases and side effects</li><li>Check stories are genuinely ready before sizing, and treat every developer question as a possible gap in the criteria</li><li>Track organisational readiness (communications, training, procedures) alongside the build, with owners and dates</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>A story is only useful if a developer can build it and a tester can test it without needing a meeting. And a perfect build can still fail at go-live if the organisation isn't ready, so readiness is tracked from the first sprint, not the last.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="radio-ramadan.html#stories"><b>Radio Ramadan</b><span>Nineteen stories with the confirmed business rules written into the acceptance criteria, each listing the stories it depends on, plus a Trello prototype that shows the owner, status and next action on every booking.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="caldwell.html#requirements"><b>CRM transformation</b><span>Nine stories across three epics, each written for a real user group, from sales staff to finance, with criteria specific enough to test.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">User stories</span><span class="chip">Given/When/Then</span><span class="chip">Backlog</span><span class="chip">Definition of Ready</span><span class="chip">Change and readiness tracking</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-uat" role="tabpanel" aria-labelledby="lc-tab-uat" hidden>
+        <div class="lc-head"><span class="lc-num">05</span><h3>UAT</h3><span class="lc-q">Verify it</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Plan UAT during design, starting with a test plan: scope, entry and exit criteria, roles and defect process</li><li>Derive every test case from an acceptance criterion and keep the link</li><li>Cover negative and boundary conditions, where the real defects tend to hide</li><li>Triage each defect: is it genuine, or a new requirement that belongs in change control?</li><li>Close with a summary report and written sign-off, with owners and dates for anything conditional</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>UAT is the business confirming that this is what it asked for. A weak UAT means a weak sign-off, and risk goes live with the solution. Because every test traces to a criterion, the testing is structured and defensible, not exploratory.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="caldwell.html#uat"><b>CRM transformation</b><span>I recorded 35 UAT outcomes against individual acceptance criteria (27 passed) and logged a mismatch between the test count and the catalogue as a handover action, rather than hiding it.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="radio-ramadan.html#tests"><b>Radio Ramadan</b><span>Fourteen scenarios, each traced to the stories it proves, typed as positive, negative, boundary or control, including tests that stop an advert from being scheduled before the client approves it.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">UAT test plan</span><span class="chip">Test cases</span><span class="chip">Negative and boundary testing</span><span class="chip">Defect triage</span><span class="chip">Sign-off</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-benefits" role="tabpanel" aria-labelledby="lc-tab-benefits" hidden>
+        <div class="lc-head"><span class="lc-num">06</span><h3>Benefits</h3><span class="lc-q">Did it deliver?</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Ask "how will we know this worked?" from Initiation onwards, not just at the end</li><li>Define each benefit with a baseline, a target, a measurement method, a data source, a named owner and a reporting cadence</li><li>Record results honestly: "on track" is not "achieved", and an early warning is a useful signal, not a failure</li><li>Hand over one to one, confirming each owner can actually get the data, not just that they agreed in a meeting</li><li>Account for every deliverable, and capture lessons that are specific enough to act on</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>Most BAs move on at go-live and never find out whether the project worked. Closing the loop answers the question the project started with. A measurement plan without named owners is just decoration.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="caldwell.html#handover"><b>CRM transformation</b><span>The end report shows each objective as achieved or still in progress, treats the 18% revenue uplift as a target to track rather than a result, and hands six open actions to the in-house team.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="radio-ramadan.html#handover"><b>Radio Ramadan</b><span>I closed the analysis without claiming any unmeasured benefits, proposed baseline measures for a pilot, and wrote lessons as actions, such as agreeing a business owner and the required fields before piloting.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">Benefits measurement plan</span><span class="chip">Benefits tracking</span><span class="chip">Ownership handover</span><span class="chip">Lessons learned</span><span class="chip">Closure summary</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-panel" id="lc-traceability" role="tabpanel" aria-labelledby="lc-tab-traceability" hidden>
+        <div class="lc-head"><h3>Traceability</h3><span class="lc-q">Runs through every phase</span></div>
+        <div class="lc-body">
+          <div>
+            <h4>What I do</h4>
+            <ul class="ticks"><li>Keep one chain: business requirement, then stakeholder requirement, then functional requirement, then story, then test</li><li>Give every item a consistent ID and link each one to what it came from</li><li>Check for orphans: no requirement without a source, and no business need without coverage</li><li>Use the links to assess the impact of any change</li></ul>
+            <div class="callout lc-why"><b>Why it matters</b><p>Traceability proves that no objective was left unsupported and that no requirement is random. When something changes, I can see straight away what else it affects. At sign-off, I can show that every need was built and tested.</p></div>
+          </div>
+          <div>
+            <h4>From my projects</h4>
+            <a class="lc-ex" href="radio-ramadan.html#tests"><b>Radio Ramadan</b><span>Every test lists the stories it proves; for example, TC-14 traces to stories 2.6, 3.1 and 3.2. Every story maps to a use case.</span><em>See it in the case study →</em></a>
+            <a class="lc-ex" href="caldwell.html#uat"><b>CRM transformation</b><span>Each acceptance criterion in the requirements catalogue carries its own UAT result, so gaps are visible line by line.</span><em>See it in the case study →</em></a>
+            <h4>Techniques</h4>
+            <div class="skills"><span class="chip">Requirements traceability</span><span class="chip">Impact analysis</span><span class="chip">Consistent IDs</span></div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
   </section>
 

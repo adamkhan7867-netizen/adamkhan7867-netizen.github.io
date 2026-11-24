@@ -120,11 +120,37 @@ section:last-of-type { padding-bottom: 72px; }
 .chip.muted { background: var(--bg); color: var(--ink-3); border: 1px solid var(--line); }
 
 /* Lifecycle */
-.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: s; }
-.step { background: var(--surface); border-radius: 14px; padding: 22px; box-shadow: var(--shadow); position: relative; }
-.step::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 12px; }
-.step h4 { font-size: 17px; margin-bottom: 6px; }
-.step p { font-size: 14.5px; color: var(--ink-2); margin: 0; }
+.lc-tabs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px 26px; }
+.lc-card { font: inherit; color: var(--ink); background: var(--surface); border: 1.5px solid color-mix(in srgb, var(--brand) 22%, var(--line)); border-radius: 16px; padding: 22px 14px 20px; cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; box-shadow: var(--shadow); transition: background .15s, border-color .15s, transform .15s; }
+.lc-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.lc-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.lc-card .lc-num { color: var(--brand); font-weight: 700; font-size: 22px; line-height: 1; }
+.lc-card .lc-name { font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+.lc-card .lc-q { color: var(--ink-2); font-size: 14.5px; line-height: 1.4; }
+.lc-card[aria-selected="true"] { background: var(--brand); border-color: var(--brand); }
+.lc-card[aria-selected="true"] .lc-num, .lc-card[aria-selected="true"] .lc-name, .lc-card[aria-selected="true"] .lc-q { color: #fff; }
+.lc-card:nth-child(-n+5)::after { content: "→"; position: absolute; right: -21px; top: 50%; transform: translateY(-50%); color: var(--brand); font-weight: 800; font-size: 18px; pointer-events: none; }
+.lc-trace { grid-column: 1 / -1; flex-direction: row; justify-content: center; gap: 14px; border-radius: 999px; padding: 13px 20px; background: var(--brand-soft); }
+.lc-trace .lc-name { font-size: 16.5px; color: var(--brand-ink); }
+.lc-trace .lc-q { font-size: 14.5px; }
+.lc-panel { grid-column: 1 / -1; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px 34px; border-top: 4px solid var(--brand); }
+.lc-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.lc-head .lc-num { color: var(--brand); font-weight: 800; font-size: 20px; }
+.lc-head h3 { margin: 0; font-size: 25px; }
+.lc-head .lc-q { color: var(--ink-2); font-size: 17px; }
+.lc-body { display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; }
+.lc-body h4 { font-size: 12.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin: 0 0 12px; }
+.lc-body h4 + .skills { margin-top: 0; }
+.lc-body > div > h4:not(:first-child) { margin-top: 20px; }
+.lc-why { margin-top: 18px; }
+.lc-why p { margin: 6px 0 0; color: var(--ink-2); }
+.lc-ex { display: block; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; color: inherit; }
+.lc-ex:hover { border-color: var(--brand); text-decoration: none; }
+.lc-ex b { display: block; font-size: 15.5px; margin-bottom: 4px; }
+.lc-ex span { display: block; color: var(--ink-2); font-size: 15px; }
+.lc-ex em { display: block; font-style: normal; color: var(--brand); font-weight: 600; font-size: 14px; margin-top: 6px; }
+.phase-tag { display: inline-block; background: var(--brand-soft); color: var(--brand-ink); border-radius: 999px; padding: 2px 10px; margin-right: 8px; letter-spacing: .06em; }
+.phase-tag:hover { text-decoration: none; background: var(--brand); color: #fff; }
 
 /* Project pages */
 .subnav { position: sticky; top: 68px; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
@@ -245,7 +271,9 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
 /* Responsive */
 @media (max-width: 960px) {
   .grid-3, .options, .lessons { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: repeat(2, 1fr); }
+  .lc-tabs { grid-template-columns: repeat(3, 1fr); }
+  .lc-card:nth-child(-n+5)::after { content: none; }
+  .lc-body { grid-template-columns: 1fr; gap: 10px; }
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
@@ -257,7 +285,13 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
   .nav a { padding: 10px 0; }
   .hero { padding: 48px 0 120px; }
   .card, .panel { padding: 24px 20px; }
-  .steps { grid-template-columns: 1fr; }
+  .lc-tabs { grid-template-columns: 1fr; gap: 10px; }
+  .lc-card { flex-direction: row; flex-wrap: wrap; align-items: baseline; text-align: left; padding: 14px 16px; gap: 4px 10px; }
+  .lc-card .lc-num { font-size: 17px; }
+  .lc-card .lc-name { font-size: 17px; }
+  .lc-card .lc-q { flex-basis: 100%; }
+  .lc-trace { border-radius: 16px; justify-content: flex-start; }
+  .lc-panel { padding: 22px 18px; }
   .matrix { grid-template-columns: 24px 1fr; grid-template-rows: auto auto auto; }
   .matrix .q { grid-column: 2; }
   .matrix .ylab { grid-row: 1 / 3; }
@@ -271,7 +305,7 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
   body { background: #fff; font-size: 12pt; }
   .hero { background: none; padding: 0 0 12pt; }
   .lift { margin-top: 0; }
-  .card, .panel, .figure, .work-card, .step, .lessons div { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+  .card, .panel, .figure, .work-card, .lc-panel, .lessons div { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
   section { padding-top: 18pt; }
   a { color: inherit; }
   .figure .img-wrap img { max-height: 420px; }
