@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio Ramadan Workflow | Adam Khan</title>
+<meta name="description" content="Case study: redesigning the advertising and sponsorship workflow at Radio Ramadan, from discovery to user stories, test scenarios and a Trello prototype.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Adam Khan</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Portfolio</a>
+      <a href="caldwell.html">CRM project</a>
+      <a href="radio-ramadan.html" aria-current="page">Radio Ramadan</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero short">
+  <div class="wrap">
+    <span class="pill">Volunteer Business Analyst · Radio Ramadan UK</span>
+    <h1>Advertising and sponsorship workflow</h1>
+    <p class="lede">A community radio station sells advertising to local businesses for its Ramadan broadcasts. Every advert passes through sales, scripting, production, client approval and scheduling, and the hand-offs were hard to see.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <article class="card lift">
+    <span class="tag soft">Project summary</span>
+    <h2>My role: discovery through to test design and handover</h2>
+    <p class="intro">I gathered requirements from management, sponsors and the production team, mapped the current and proposed process, and wrote a business case for standardising the station's existing Trello board. I then defined the user stories and test scenarios, and built a working Trello prototype of the new workflow.</p>
+    <div class="stats">
+      <div class="stat"><b>7</b><span>Process stages mapped</span></div>
+      <div class="stat"><b>19</b><span>User stories across 3 epics</span></div>
+      <div class="stat"><b>14</b><span>Test scenarios traced to stories</span></div>
+      <div class="stat"><b>6</b><span>Handover actions</span></div>
+    </div>
+    <dl class="meta">
+      <div><dt>Organisation</dt><dd>Radio Ramadan, Glasgow</dd></div>
+      <div><dt>When</dt><dd>June to December 2025</dd></div>
+      <div><dt>Status</dt><dd>Recommendation made; pilot pending</dd></div>
+      <div><dt>Tools</dt><dd>Draw.io, Trello, Excel, Word</dd></div>
+    </dl>
+  </article>
+</div>
+
+<nav class="subnav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#discovery">Discovery</a>
+    <a href="#as-is">As-is process</a>
+    <a href="#business-case">Business case</a>
+    <a href="#to-be">To-be process</a>
+    <a href="#use-case">Use cases</a>
+    <a href="#stories">User stories</a>
+    <a href="#tests">Test scenarios</a>
+    <a href="#prototype">Trello prototype</a>
+    <a href="#handover">Handover</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="discovery">
+    <p class="eyebrow">1 · Discovery</p>
+    <h2 class="section-title">Seven stages, five roles, many hand-offs</h2>
+    <p class="section-lede">Enquiries came in two ways: businesses phoning or emailing the advertising line, and the sales representative approaching local businesses. From there, each advert passed through seven stages.</p>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>The journey of an advert</h3>
+        <ol style="margin:0;padding-left:20px;color:var(--ink-2)">
+          <li>Enquiry and sales conversation</li>
+          <li>Gather client requirements and brief</li>
+          <li>Write the script and approve it internally</li>
+          <li>Record and edit the audio</li>
+          <li>Client review and amendments</li>
+          <li>Create the broadcast order (dates and frequency)</li>
+          <li>Broadcast</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>What the team could not easily see</h3>
+        <ul class="ticks pains">
+          <li>Which enquiries had agreed to go ahead</li>
+          <li>Whether a script was waiting, in review or approved</li>
+          <li>Whether the client had signed off, or asked for changes</li>
+          <li>Deadlines that later stages depended on</li>
+          <li>Broadcast dates and frequency for each approved advert</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:14px;color:var(--ink-3);font-size:14.5px">Sources: discovery notes, the 2026 sales report and advertising tariff, and the team's existing RR Adverts 2026 Trello board. A sample card had an unticked approval checklist, which was early evidence that sign-off was not being recorded consistently.</p>
+  </section>
+
+  <section id="as-is">
+    <p class="eyebrow">2 · Current state</p>
+    <h2 class="section-title">How it worked before</h2>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/as-is-process.png" alt="As-is BPMN swimlane of the Radio Ramadan sponsorship and advertising process" loading="lazy"></div>
+      <figcaption><b>As-is sponsorship and advertising process (BPMN)</b>Four lanes: sponsor, sales and advertising, script and production, and broadcast scheduling. The Trello board tracked broad stages, but nothing checked that the brief was complete or that approvals were recorded before work moved on.</figcaption>
+    </figure>
+  </section>
+
+  <section id="business-case">
+    <p class="eyebrow">3 · Business case</p>
+    <h2 class="section-title">Fix the tool they already use</h2>
+    <p class="section-lede">I compared three options on operational fit, expected benefit, effort and cost. No measured baseline existed, so I described the costs qualitatively and proposed measuring benefits during a pilot rather than claiming them up front.</p>
+    <div class="options">
+      <div class="option">
+        <h4>1 · Keep the current approach</h4>
+        <p>No setup effort, but ownership, deadlines and approval checks stay unclear.</p>
+      </div>
+      <div class="option pick">
+        <span class="chip pass">Recommended</span>
+        <h4 style="margin-top:8px">2 · Standardise the existing Trello workflow</h4>
+        <p>Agree card fields, a named owner, next action and due date, and stage checklists for requirements and approvals. Builds on a tool the team already knows.</p>
+      </div>
+      <div class="option">
+        <h4>3 · Introduce a separate system</h4>
+        <p>Could add reporting and automation, but needs selection, migration, training and subscriptions. The evidence did not justify it for one campaign.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="to-be">
+    <p class="eyebrow">4 · Future state</p>
+    <h2 class="section-title">The proposed process, with controls built in</h2>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/to-be-process.png" alt="Proposed to-be BPMN swimlane for sponsorship and advertising" loading="lazy"></div>
+      <figcaption><b>Proposed to-be process (BPMN)</b>One Trello card per booking, with a brief-complete gate before production, internal script approval, recorded client approval, and a check of the broadcast order before scheduling. Click to enlarge; this diagram is wide.</figcaption>
+    </figure>
+  </section>
+
+  <section id="use-case">
+    <p class="eyebrow">5 · Use cases</p>
+    <h2 class="section-title">Who does what in the new workflow</h2>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/to-be-use-case.png" alt="To-be UML use case diagram for Radio Ramadan advertising and sponsorship" loading="lazy"></div>
+      <figcaption><b>To-be use case diagram (UML)</b>Nineteen use cases in three groups (enquiry and booking, advert production and approval, and broadcast scheduling and oversight) across five actors. Each use case became a user story.</figcaption>
+    </figure>
+  </section>
+
+  <section id="stories">
+    <p class="eyebrow">6 · Requirements</p>
+    <h2 class="section-title">19 user stories with acceptance criteria</h2>
+    <p class="section-lede">Every story traces back to the use case diagram and the discovery notes, and each lists the stories it depends on. Business rules confirmed with the team, such as 30-second adverts, five-minute ad breaks and two-manager sign-off, are written into the acceptance criteria.</p>
+    <div class="filters" data-for="rr-stories">
+      <button data-filter="all" aria-pressed="true">All 19</button>
+      <button data-filter="e1" aria-pressed="false">Enquiry and booking</button>
+      <button data-filter="e2" aria-pressed="false">Production and approval</button>
+      <button data-filter="e3" aria-pressed="false">Scheduling and oversight</button>
+    </div>
+    <div class="table-scroll">
+      <table id="rr-stories">
+        <thead><tr><th>ID</th><th>User story</th><th>Acceptance criteria</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr data-group="e1"><td class="id">1.1</td><td>As a <b>sponsor</b>, I want to submit an advertising or sponsorship enquiry, so that Radio Ramadan can follow it up.</td><td><ul class="ac"><li>Staff can access a record of each enquiry</li><li>It shows advertising, sponsorship or both</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.2</td><td>As a <b>sponsor</b>, I want to provide campaign details and a brief, so that the station understands my request.</td><td><ul class="ac"><li>Captures business and contact details, message and requested length</li><li>Missing details are visible before it progresses</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.3</td><td>As <b>sales staff</b>, I want to record an enquiry and assign an owner, so that someone is responsible for it.</td><td><ul class="ac"><li>An owner can be assigned to each new enquiry</li><li>The owner is visible on the record</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.4</td><td>As a <b>sponsor</b>, I want to agree a package and price from the 2026 tariff, so that the booking matches the offer.</td><td><ul class="ac"><li>Agreed price recorded against the tariff</li><li>Repeat-business discounts need a reason and Sales Manager approval</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.5</td><td>As <b>sales staff</b>, I want to capture booking requirements and dates, so that production and broadcast can be coordinated.</td><td><ul class="ac"><li>Deliverables and delivery dates recorded</li><li>Booking stays linked to its enquiry</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.6</td><td>As <b>sales staff</b>, I want to check the brief is complete, so that gaps are fixed before production.</td><td><ul class="ac"><li>Brief checked against required fields</li><li>Production Manager approves the brief before scripting</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e1"><td class="id">1.7</td><td>As <b>sales staff</b>, I want to track each booking's owner, status and next action date, so that I can see what needs attention.</td><td><ul class="ac"><li>Owner, status and next action date shown</li><li>Overdue next actions can be identified</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.1</td><td>As a <b>sponsor</b>, I want to give the general message and length of my advert, so that a suitable script can be written.</td><td><ul class="ac"><li>Message and length captured on the booking</li><li>Length checked against available segment time</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.2</td><td>As <b>production staff</b>, I want to draft a script from the approved brief, so that the advert matches the campaign.</td><td><ul class="ac"><li>Script reflects the message and agreed length</li><li>Submitted for Production Manager approval before recording</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.3</td><td>As the <b>Production Manager</b>, I want to review scripts internally, so that issues are fixed before recording.</td><td><ul class="ac"><li>Approval or changes recorded per script version</li><li>No recording until the script is approved</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.4</td><td>As <b>production staff</b>, I want to record and edit the advert, so that audio is produced from the approved script.</td><td><ul class="ac"><li>Recording linked to the booking and script</li><li>Files stored in OneDrive and a backup, with role-based access</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.5</td><td>As the <b>Production and Sales Managers</b>, we want to check the final advert against the brief, so that problems are caught before the client sees it.</td><td><ul class="ac"><li>Both managers approve before client review</li><li>Both decisions recorded</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.6</td><td>As a <b>sponsor</b>, I want to review the advert and approve it or request changes, so that nothing airs without my review.</td><td><ul class="ac"><li>Production Manager shares a OneDrive review link</li><li>Follow-up call; decision recorded against the version</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e2"><td class="id">2.7</td><td>As the <b>Production Manager</b>, I want to record approval and update the Trello card, so that the team knows it is ready to schedule.</td><td><ul class="ac"><li>Approved version recorded</li><li>Card updated after every interaction, revision and progress change</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e3"><td class="id">3.1</td><td>As a <b>broadcast scheduler</b>, I want to create a broadcast order from a confirmed booking, so that scheduling uses agreed details.</td><td><ul class="ac"><li>Order shows 30-second length, time of day, dates, frequency and break placement</li><li>Signed off by both managers</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e3"><td class="id">3.2</td><td>As a <b>broadcast scheduler</b>, I want to schedule adverts into agreed slots, so that delivery follows the order.</td><td><ul class="ac"><li>Adverts run back to back in the five-minute break</li><li>Day or night timing and sequence recorded; conflicts resolved</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e3"><td class="id">3.3</td><td>As a <b>broadcast scheduler</b>, I want to check the schedule against the order, so that mismatches are fixed before broadcast.</td><td><ul class="ac"><li>Planned sequence compared with the approved order</li><li>Final schedule recorded with approvals kept</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr data-group="e3"><td class="id">3.4</td><td>As a <b>manager</b>, I want to review the enquiry and booking pipeline, so that I can see where follow-up is needed.</td><td><ul class="ac"><li>Reviewed at the weekly catch-up</li><li>Actions recorded with owner and due date</li></ul></td><td><span class="chip muted">Should</span></td></tr>
+          <tr data-group="e3"><td class="id">3.5</td><td>As a <b>manager</b>, I want to monitor outstanding deliverables and deadlines, so that overdue work is chased.</td><td><ul class="ac"><li>Deadlines reviewed weekly</li><li>Overdue items linked to an owner and action</li></ul></td><td><span class="chip muted">Should</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tests">
+    <p class="eyebrow">7 · Test design</p>
+    <h2 class="section-title">14 test scenarios, traced to the stories</h2>
+    <p class="section-lede">I wrote positive, negative and control tests, including checks that adverts cannot reach the client or the schedule before the right approvals are in place. They are designed and ready to run once the station agrees the operational setup.</p>
+    <div class="filters" data-for="rr-tests">
+      <button data-filter="all" aria-pressed="true">All 14</button>
+      <button data-filter="pos" aria-pressed="false">Positive</button>
+      <button data-filter="neg" aria-pressed="false">Negative and control</button>
+      <button data-filter="gate" aria-pressed="false">Approval gates</button>
+    </div>
+    <div class="table-scroll">
+      <table id="rr-tests">
+        <thead><tr><th>Test</th><th>Stories</th><th>Scenario</th><th>Expected result</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr data-group="pos"><td class="id">TC-01</td><td>1.1, 1.2</td><td>Record a complete advertising enquiry</td><td>All business, contact and brief details saved on one booking</td><td><span class="chip">Positive</span></td></tr>
+          <tr data-group="neg"><td class="id">TC-02</td><td>1.2, 1.6</td><td>Leave a required field blank</td><td>Missing field is flagged before the brief goes to production</td><td><span class="chip fail">Negative</span></td></tr>
+          <tr data-group="gate"><td class="id">TC-03</td><td>1.4</td><td>Repeat-business price exception</td><td>Not approved until both approvals and the reason are recorded</td><td><span class="chip pending">Approval</span></td></tr>
+          <tr data-group="gate"><td class="id">TC-04</td><td>1.6, 2.2, 2.3</td><td>Approve brief and script before recording</td><td>Recording only starts after script approval</td><td><span class="chip pending">Gate</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-05</td><td>2.4</td><td>Store files in OneDrive with backup</td><td>Both locations recorded; all three staff groups have access</td><td><span class="chip">Access</span></td></tr>
+          <tr data-group="gate"><td class="id">TC-06</td><td>2.5, 2.6</td><td>Internal approvals before client review</td><td>Both manager approvals recorded before the link is sent</td><td><span class="chip pending">Gate</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-07</td><td>2.6, 2.7</td><td>Client approves or requests changes</td><td>Decision linked to the version; changes keep it in review</td><td><span class="chip">Revision</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-08</td><td>2.7</td><td>Update Trello after each interaction</td><td>Card shows each update, status and next action</td><td><span class="chip">Records</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-09</td><td>3.1</td><td>Create and approve a broadcast order</td><td>All fields present; both managers sign before scheduling</td><td><span class="chip">Positive</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-10</td><td>3.2</td><td>Schedule adverts in a five-minute break</td><td>30-second adverts in order, then normal programming resumes</td><td><span class="chip">Boundary</span></td></tr>
+          <tr data-group="neg"><td class="id">TC-11</td><td>3.2, 3.3</td><td>Two adverts compete for one slot</td><td>Conflict resolved by the named roles and recorded</td><td><span class="chip fail">Exception</span></td></tr>
+          <tr data-group="pos"><td class="id">TC-12</td><td>3.4, 3.5</td><td>Weekly pipeline and deadline review</td><td>Overdue work identified; actions get owners and dates</td><td><span class="chip">Reporting</span></td></tr>
+          <tr data-group="neg gate"><td class="id">TC-13</td><td>2.5, 2.6</td><td>Send to client with only one manager approval</td><td>Blocked until the second approval is recorded</td><td><span class="chip fail">Control</span></td></tr>
+          <tr data-group="neg gate"><td class="id">TC-14</td><td>2.6, 3.1, 3.2</td><td>Schedule before client approval</td><td>Advert stays out of "ready to schedule" until the client approves</td><td><span class="chip fail">Control</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="prototype">
+    <p class="eyebrow">8 · Prototype</p>
+    <h2 class="section-title">A Trello board the team can adopt</h2>
+    <p class="section-lede">I built the proposed workflow as a working Trello board in a test account. Each booking is one card that moves across seven lists, with a checklist that records every approval.</p>
+    <div class="panel">
+      <div class="board">
+        <div class="col"><h5>1 · New enquiry</h5><div>Channel: phone, email or outbound</div><div>Owner and next action</div></div>
+        <div class="col"><h5>2 · Brief and pricing</h5><div>Contact details and address</div><div>30 sec, message, tariff</div><div>Repeat-business approval</div></div>
+        <div class="col"><h5>3 · Script and production</h5><div>PM approves brief and script</div><div>Audio saved to OneDrive and backup</div></div>
+        <div class="col"><h5>4 · Internal approval</h5><div>Production Manager approval</div><div>Sales Manager approval</div></div>
+        <div class="col"><h5>5 · Client review</h5><div>OneDrive review link</div><div>Follow-up call, outcome recorded</div></div>
+        <div class="col"><h5>6 · Ready to schedule</h5><div>Order signed by both managers</div><div>Day or night, dates, frequency</div></div>
+        <div class="col"><h5>7 · Scheduled</h5><div>Placed in five-minute break</div><div>Conflicts resolved, sequence logged</div></div>
+      </div>
+      <p class="note">Rule on every card: the Production Manager updates it after each interaction, revision and progress change, with the outcome, current status and next action. <a href="https://trello.com/b/SWzuSG7S/radio-ramadan-adverts-sponsorship-workflow">Open the prototype board in Trello →</a></p>
+    </div>
+    <figure class="figure" style="margin-top:22px">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/trello-board.png" alt="Wireframe of the proposed RR Adverts 2026 Trello board" loading="lazy"></div>
+      <figcaption><b>Board wireframe</b>Designed in Draw.io before building the board, so the team could agree the lists and card contents first.</figcaption>
+    </figure>
+  </section>
+
+  <section id="handover">
+    <p class="eyebrow">9 · Handover and lessons</p>
+    <h2 class="section-title">What the station needs to decide next</h2>
+    <p class="section-lede">I closed the analysis with an end-of-project report and a handover pack. I was careful to separate what had been agreed from what was still a proposal, and claimed no benefits that hadn't been measured.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ref</th><th>Open action</th><th>Proposed owner</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="id">HO-01</td><td>Write the agreed workflow and approvals into one procedure</td><td>Management, Sales, Production</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">HO-02</td><td>Confirm booking fields and how enquiry, advert and approvals link</td><td>Advertising and Marketing</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">HO-03</td><td>Confirm break capacity, sequencing and conflict rules</td><td>Production Manager</td><td><span class="chip fail">Decision needed</span></td></tr>
+          <tr><td class="id">HO-04</td><td>Verify the OneDrive folders, backup, access and file naming</td><td>Management, Production</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">HO-05</td><td>Decide whether to adopt the prototype board in the station's workspace</td><td>Management, Production</td><td><span class="chip fail">Decision needed</span></td></tr>
+          <tr><td class="id">HO-06</td><td>Assign owners, dates and a first review before the next campaign</td><td>Management</td><td><span class="chip pending">Open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="lessons" style="margin-top:22px">
+      <div><h4>What went well</h4><ul><li>Process maps, use cases and stories made roles and approval points easy to discuss</li><li>Building on Trello avoided assuming a new system was needed</li></ul></div>
+      <div><h4>What was hard</h4><ul><li>No baseline existed for delays, rework or workload</li><li>Live adoption depends on the station's own decision and owners</li></ul></div>
+      <div><h4>What I'd do next time</h4><ul><li>Agree a business owner and required fields before piloting</li><li>Set baseline measures, then sample live cards weekly</li><li>Run the 14 scenarios once the setup is agreed</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout"><b>Previous case study:</b> <a href="caldwell.html">CRM and onboarding transformation →</a></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Adam Khan · Business Analyst</span>
+    <span><a href="https://www.linkedin.com/in/akhans">LinkedIn</a> · <a href="resume.html">Resume</a></span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

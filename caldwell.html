@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM Transformation | Adam Khan</title>
+<meta name="description" content="Case study: replacing spreadsheet-based lead management at an independent training provider with a CRM, from business case to UAT and handover.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Adam Khan</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Portfolio</a>
+      <a href="caldwell.html" aria-current="page">CRM project</a>
+      <a href="radio-ramadan.html">Radio Ramadan</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero short">
+  <div class="wrap">
+    <span class="pill">Business Analyst (Contract) · Caldwell Foster Advisory</span>
+    <h1>CRM and onboarding transformation</h1>
+    <p class="lede">An independent training provider held every enquiry and lead in spreadsheets. The goal was a CRM linked to a new landing page, with an 18% first-quarter revenue uplift as the target.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <article class="card lift">
+    <span class="tag soft">Project summary</span>
+    <h2>My role: contract Business Analyst, business case through to handover</h2>
+    <p class="intro">I analysed stakeholders, mapped the current sales process, wrote the business case, defined the requirements and user stories, designed the customer-facing wireframes and recorded UAT results. The in-house CRM team now has a clear list of what passed, what failed and what is still open.</p>
+    <div class="stats">
+      <div class="stat"><b>£97k</b><span>Budget for the work</span></div>
+      <div class="stat"><b>9</b><span>User stories</span></div>
+      <div class="stat"><b>27</b><span>Requirements (20 functional, 7 non-functional)</span></div>
+      <div class="stat"><b>77%</b><span>UAT pass rate (27 of 35)</span></div>
+    </div>
+    <dl class="meta">
+      <div><dt>Engagement</dt><dd>Contract, Mar to Jun 2026</dd></div>
+      <div><dt>Users</dt><dd>2 marketing, 6 sales, 2 managers</dd></div>
+      <div><dt>Contacts</dt><dd>27,321, growing to 35,000</dd></div>
+      <div><dt>Tools</dt><dd>Draw.io, Jira, Confluence, Excel</dd></div>
+    </dl>
+  </article>
+</div>
+
+<nav class="subnav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#problem">Problem</a>
+    <a href="#stakeholders">Stakeholders</a>
+    <a href="#as-is">As-is process</a>
+    <a href="#business-case">Business case</a>
+    <a href="#to-be">To-be</a>
+    <a href="#requirements">User stories</a>
+    <a href="#wireframes">Wireframes</a>
+    <a href="#uat">UAT</a>
+    <a href="#handover">Handover</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="problem">
+    <p class="eyebrow">1 · Problem</p>
+    <h2 class="section-title">Spreadsheets were holding sales back</h2>
+    <p class="section-lede">The client earns from two streams, classroom courses and professional exam testing. Neither had a single view of the customer.</p>
+    <div class="panel">
+      <ul class="ticks pains">
+        <li><b>Inaccurate and duplicated data.</b> Manual entry led to out-of-date and duplicate records.</li>
+        <li><b>No automation.</b> Every follow-up was typed and sent by hand, so leads went cold.</li>
+        <li><b>No central view.</b> Interactions sat in separate files with no dashboard for managers.</li>
+        <li><b>Could not scale.</b> The contact list was set to grow by around 28% within the year.</li>
+        <li><b>Security and compliance risk.</b> Customer data was saved in many places with no control.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stakeholders">
+    <p class="eyebrow">2 · Stakeholders</p>
+    <h2 class="section-title">Who needed to be involved, and how</h2>
+    <p class="section-lede">I built a stakeholder register and an influence and interest grid from the project governance, the process map and conversations with the sponsor, project lead, sales and marketing staff, and the in-house CRM team.</p>
+    <div class="panel">
+      <div class="matrix">
+        <div class="ylab">Interest ↑</div>
+        <div class="q q1"><h5>Keep informed</h5><ul><li>Marketing staff (2)</li><li>Sales staff (6)</li><li>Prospective students</li><li>Head office and centre staff</li></ul></div>
+        <div class="q q2"><h5>Manage closely</h5><ul><li>Client sponsor and business owner</li><li>Project lead</li><li>Local delivery lead</li><li>Sales managers</li><li>In-house CRM team (for handover)</li></ul></div>
+        <div class="q q1"><h5>Monitor</h5><ul><li>Wider student cohort</li></ul></div>
+        <div class="q q1"><h5>Keep satisfied</h5><ul><li>Landing-page and technical owner (still to be identified)</li></ul></div>
+        <div class="xlab">Influence →</div>
+      </div>
+      <p class="note">Ratings are my analyst assessment and were flagged for validation with the project lead and sponsor. I also flagged that the landing-page technical owner had not been consulted, which is a real integration risk.</p>
+    </div>
+  </section>
+
+  <section id="as-is">
+    <p class="eyebrow">3 · Current state</p>
+    <h2 class="section-title">How an enquiry became a sale</h2>
+    <p class="section-lede">I mapped the as-is sales process across three lanes: the customer, the client's head office and the local training centre.</p>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/caldwell/as-is-process.png" alt="As-is BPMN swimlane of the client sales process" loading="lazy"></div>
+      <figcaption><b>As-is sales process (BPMN)</b>Every enquiry passed through a spreadsheet twice, once at head office and again at the local centre. If a call went unanswered, the only fallback was an email asking the customer to call back. Three of the four end points are lost sales.</figcaption>
+    </figure>
+  </section>
+
+  <section id="business-case">
+    <p class="eyebrow">4 · Business case</p>
+    <h2 class="section-title">Three CRMs compared, one recommended</h2>
+    <p class="section-lede">I compared each option on CRM capability, ease of use for a team new to CRM, and annual cost for 10 users within the £97k budget.</p>
+    <div class="options">
+      <div class="option">
+        <h4>Salesforce</h4>
+        <p>Highly customisable with strong AI reporting, but costly and complex for first-time CRM users.</p>
+        <p class="price">£2,400 to £15,840 a year, plus implementation</p>
+      </div>
+      <div class="option">
+        <h4>Mailchimp</h4>
+        <p>Strong email marketing, but no sales pipeline, relationship history or lead scoring.</p>
+        <p class="price">£2,658 to £5,864 a year, rising after 12 months</p>
+      </div>
+      <div class="option pick">
+        <span class="chip pass">Recommended</span>
+        <h4 style="margin-top:8px">ActiveCampaign</h4>
+        <p>CRM, email marketing and automation in one place. Easy to learn, supports lead scoring, and integrates with the landing page.</p>
+        <p class="price">£5,604 to £11,172 a year, covers 10 users and 35,000 contacts</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="to-be">
+    <p class="eyebrow">5 · Future state</p>
+    <h2 class="section-title">What the CRM needs to do</h2>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/caldwell/to-be-use-case.png" alt="To-be UML use case diagram for the CRM" loading="lazy"></div>
+      <figcaption><b>To-be use case diagram (UML)</b>Four capability areas (reporting, email marketing, online marketing and lead management) mapped to the marketing team, the sales team and lead management.</figcaption>
+    </figure>
+  </section>
+
+  <section id="requirements">
+    <p class="eyebrow">6 · Requirements</p>
+    <h2 class="section-title">User stories with acceptance criteria</h2>
+    <p class="section-lede">Nine stories across three epics, written from the point of view of each user group. All nine were prioritised as Must Have for the first release.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>ID</th><th>User story</th><th>Acceptance criteria</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr class="epic"><td colspan="4">Accounts and contact management</td></tr>
+          <tr><td class="id">US-01</td><td>As a <b>salesperson</b>, I want to organise contacts effectively, so that I can maximise the value of each customer.</td><td><ul class="ac"><li>Contacts sort A to Z by first name</li><li>Child accounts link to and show on the parent account, to reveal cross-sell opportunities</li><li>Customer email is visible</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-02</td><td>As a <b>salesperson</b>, I want to call customers from the CRM, so that I can close more sales.</td><td><ul class="ac"><li>A phone icon next to each customer starts a call</li><li>Calls can last up to 2 hours</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-03</td><td>As a <b>salesperson</b>, I want to follow up by email, so that I can qualify where each customer is in the process.</td><td><ul class="ac"><li>An email is sent automatically when a lead is created</li><li>The CRM reminds me to contact customers</li><li>Follow-up tasks are assigned to me with due dates</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr class="epic"><td colspan="4">Lead management</td></tr>
+          <tr><td class="id">US-04</td><td>As a <b>sales manager</b>, I want to see my team's progress, so that they stay focused on converting leads.</td><td><ul class="ac"><li>Shows each person's KPIs and conversion rate</li><li>Red, amber and green scoring, which managers can override</li><li>A dashboard shows how quickly ready leads are actioned</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-05</td><td>As a <b>salesperson</b>, I want a dedicated leads dashboard, so that I can keep every lead moving.</td><td><ul class="ac"><li>Lead status changes from a dropdown</li><li>I can change the red, amber or green score after a follow-up</li><li>An email goes out automatically if the first contact attempt fails</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-06</td><td>As a <b>marketer</b>, I want to personalise the customer experience using data, so that customers get more value.</td><td><ul class="ac"><li>Works on web and mobile using current UI patterns</li><li>Emails and content are tailored to the course the customer joined</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr class="epic"><td colspan="4">Dashboard and reporting</td></tr>
+          <tr><td class="id">US-07</td><td>As a <b>marketer</b>, I want to see and act on email campaign performance, so that I can improve revenue.</td><td><ul class="ac"><li>A dashboard section shows campaign results</li><li>Click into any metric to see which links were clicked</li><li>Alerts the team and management when a performance threshold is crossed</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-08</td><td>As a <b>student</b>, I want a dashboard of my course progress and deadlines, so that I can stay on track.</td><td><ul class="ac"><li>Courses are listed by urgency, with module status shown</li><li>Progress can be exported as a PDF</li><li>Shows an "Explore new courses" button when I have no active course</li></ul></td><td><span class="chip">Must</span></td></tr>
+          <tr><td class="id">US-09</td><td>As a <b>finance administrator</b>, I want monthly revenue reports by course and centre, so that I can reconcile finances.</td><td><ul class="ac"><li>Filter by date range, course and centre</li><li>Shows totals in tables and charts</li><li>Flags unusually low revenue and missing payments</li></ul></td><td><span class="chip">Must</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="wireframes">
+    <p class="eyebrow">7 · Wireframes</p>
+    <h2 class="section-title">13 screens for the new landing page and student area</h2>
+    <p class="section-lede">I wireframed the customer journey from the homepage through enquiry, registration and login to the course and module pages, so stakeholders could review the experience before any build. Click a screen to enlarge it.</p>
+    <div class="gallery">
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-1.png" alt="Wireframe: Homepage" loading="lazy"><span>Homepage</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-2.png" alt="Wireframe: About" loading="lazy"><span>About</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-3.png" alt="Wireframe: FAQ" loading="lazy"><span>FAQ</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-4.png" alt="Wireframe: Contact us" loading="lazy"><span>Contact us</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-5.png" alt="Wireframe: Contact us, sent" loading="lazy"><span>Contact us, sent</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-6.png" alt="Wireframe: Login" loading="lazy"><span>Login</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-7.png" alt="Wireframe: Forgot password" loading="lazy"><span>Forgot password</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-8.png" alt="Wireframe: Forgot password, sent" loading="lazy"><span>Forgot password, sent</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-9.png" alt="Wireframe: Register" loading="lazy"><span>Register</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-10.png" alt="Wireframe: Registration confirmed" loading="lazy"><span>Registration confirmed</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-11.png" alt="Wireframe: Booking date and time, email confirmation" loading="lazy"><span>Booking confirmation</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-12.png" alt="Wireframe: Course page" loading="lazy"><span>Course page</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-13.png" alt="Wireframe: Course module" loading="lazy"><span>Course module</span></button>
+    </div>
+  </section>
+
+  <section id="uat">
+    <p class="eyebrow">8 · User acceptance testing</p>
+    <h2 class="section-title">27 of 35 tests passed</h2>
+    <p class="section-lede">I recorded UAT outcomes against each acceptance criterion in the requirements catalogue, so the team could see exactly which capabilities were proven and which were not.</p>
+    <div class="panel">
+      <div class="uat-bar" role="img" aria-label="27 passed, 8 failed out of 35 tests">
+        <span style="width:77.1%;background:var(--pass)"></span><span style="width:22.9%;background:var(--fail)"></span>
+      </div>
+      <div class="uat-legend"><span><i style="background:var(--pass)"></i>27 passed</span><span><i style="background:var(--fail)"></i>8 failed</span><span>Pass rate 77%</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>Requirements catalogue with UAT results</h3>
+      <div class="filters" data-for="cat">
+        <button data-filter="all" aria-pressed="true">All 20 requirements</button>
+        <button data-filter="fail" aria-pressed="false">With a failed criterion</button>
+        <button data-filter="contact" aria-pressed="false">Contact management</button>
+        <button data-filter="report" aria-pressed="false">Reporting</button>
+        <button data-filter="lead" aria-pressed="false">Leads</button>
+      </div>
+      <div class="table-scroll">
+        <table id="cat">
+          <thead><tr><th>ID</th><th>Requirement</th><th>Acceptance criteria and result</th></tr></thead>
+          <tbody>
+            <tr data-group="contact"><td class="id">1.1</td><td>Marketer sends automated email campaigns</td><td><span class="chip pass">Pass</span> Issue campaigns · <span class="chip pass">Pass</span> Track open rate · <span class="chip pass">Pass</span> Timed follow-ups</td></tr>
+            <tr data-group="contact fail"><td class="id">1.2</td><td>Marketer brands email campaigns</td><td><span class="chip pass">Pass</span> Add logo · <span class="chip pass">Pass</span> Link website · <span class="chip fail">Fail</span> Click-through rate · <span class="chip fail">Fail</span> Attach files</td></tr>
+            <tr data-group="contact"><td class="id">1.3</td><td>Sales manager has calls recorded</td><td><span class="chip pass">Pass</span> Record calls</td></tr>
+            <tr data-group="contact"><td class="id">1.4</td><td>Salesperson calls from the CRM</td><td><span class="chip pass">Pass</span> Built-in click-to-call</td></tr>
+            <tr data-group="contact"><td class="id">1.5</td><td>Sales manager sees a log of all calls</td><td><span class="chip pass">Pass</span> Auto-log calls · <span class="chip pass">Pass</span> Manual log linked to a lead</td></tr>
+            <tr data-group="contact fail"><td class="id">1.6</td><td>Salesperson notes calls</td><td><span class="chip fail">Fail</span> Notes pop-up · <span class="chip pass">Pass</span> Create follow-up tasks</td></tr>
+            <tr data-group="contact fail"><td class="id">1.7</td><td>Salesperson is reminded of calls</td><td><span class="chip pass">Pass</span> Reminders · <span class="chip fail">Fail</span> Missed-call alerts</td></tr>
+            <tr data-group="contact"><td class="id">1.8</td><td>Salesperson schedules calls</td><td><span class="chip pass">Pass</span> Schedule for later</td></tr>
+            <tr data-group="contact"><td class="id">1.9</td><td>User emails from the CRM</td><td><span class="chip pass">Pass</span> Send email in-app</td></tr>
+            <tr data-group="contact"><td class="id">1.10</td><td>Marketer uses email templates</td><td><span class="chip pass">Pass</span> Pre-built and custom templates</td></tr>
+            <tr data-group="contact"><td class="id">1.11</td><td>Marketer personalises emails</td><td><span class="chip pass">Pass</span> Personalised sends to list members</td></tr>
+            <tr data-group="report fail"><td class="id">2.1</td><td>Sales manager sees team performance</td><td><span class="chip fail">Fail</span> Call data charts · <span class="chip pass">Pass</span> Team performance reports</td></tr>
+            <tr data-group="report fail"><td class="id">2.2</td><td>Marketer sees campaign performance</td><td><span class="chip fail">Fail</span> Emails sent per salesperson · <span class="chip pass">Pass</span> Bounce and click rates</td></tr>
+            <tr data-group="report fail"><td class="id">2.3</td><td>Owner tracks whole-company performance</td><td><span class="chip fail">Fail</span> Drill-down charts · <span class="chip fail">Fail</span> Range of chart types</td></tr>
+            <tr data-group="report"><td class="id">2.4</td><td>Owner customises dashboards</td><td><span class="chip pass">Pass</span> Drag-and-drop editor</td></tr>
+            <tr data-group="report"><td class="id">2.5</td><td>User exports reports</td><td><span class="chip pass">Pass</span> PDF, XLS, CSV and scheduled delivery</td></tr>
+            <tr data-group="lead"><td class="id">3.1</td><td>Capture leads from different sources</td><td><span class="chip pass">Pass</span> Multi-source capture · <span class="chip pass">Pass</span> Manual add</td></tr>
+            <tr data-group="lead"><td class="id">3.2</td><td>Salesperson sees lead score</td><td><span class="chip pass">Pass</span> Rule-based scoring</td></tr>
+            <tr data-group="lead fail"><td class="id">3.3</td><td>Sales manager sees response speed</td><td><span class="chip pass">Pass</span> Won and lost % · <span class="chip pass">Pass</span> Lead lifecycle · <span class="chip fail">Fail</span> Response time</td></tr>
+            <tr data-group="lead"><td class="id">3.4</td><td>Sales manager tracks targets</td><td><span class="chip pass">Pass</span> Targets vs revenue · <span class="chip pass">Pass</span> Drill-down · <span class="chip pass">Pass</span> Forecast scenarios</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The catalogue also holds 7 non-functional requirements covering scalability, fault tolerance, and integration with accounting, BI tools and calendars. The catalogue shows 36 marked criteria (27 pass, 9 fail) against 35 tests in the end report. I logged that gap as handover action H-01 rather than smoothing it over.</p>
+    </div>
+  </section>
+
+  <section id="handover">
+    <p class="eyebrow">9 · Handover and lessons</p>
+    <h2 class="section-title">Leaving the in-house team a clear next step</h2>
+    <p class="section-lede">When the engagement ended, I wrote the end-of-project report and a Confluence handover page, and set up a Jira board with six open actions for the in-house CRM team.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Ref</th><th>Open action</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="id">H-01</td><td>Reconcile UAT totals and map each test to its acceptance criterion</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">H-02</td><td>Record details, defects, owners and retest results for the 8 failed tests</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">H-03</td><td>Confirm whether the student-progress and finance stories stay in scope</td><td><span class="chip fail">Decision needed</span></td></tr>
+          <tr><td class="id">H-04</td><td>Add measurable criteria and tests for the 7 non-functional requirements</td><td><span class="chip fail">Decision needed</span></td></tr>
+          <tr><td class="id">H-05</td><td>Plan the remaining data migration and prospect communications, with benefit measures</td><td><span class="chip pending">Open</span></td></tr>
+          <tr><td class="id">H-06</td><td>Name the receiving owners, handover date and first checkpoint</td><td><span class="chip pending">Open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="lessons" style="margin-top:22px">
+      <div><h4>What went well</h4><ul><li>Wireframes and process diagrams helped stakeholders and developers understand each other, even when meetings were limited</li><li>Rolling the CRM out in phases reduced risk</li></ul></div>
+      <div><h4>What was hard</h4><ul><li>Time zone differences slowed decisions</li><li>Revenue had not yet moved at close, so the 18% uplift remains a target to track</li></ul></div>
+      <div><h4>What I'd do next time</h4><ul><li>Join backlog refinement earlier to spot gaps</li><li>Align requirements, acceptance criteria and test scripts from day one</li><li>Keep BA support available after UAT for defect triage</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout"><b>Next case study:</b> <a href="radio-ramadan.html">Radio Ramadan advertising and sponsorship workflow →</a></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Adam Khan · Business Analyst</span>
+    <span><a href="https://www.linkedin.com/in/akhans">LinkedIn</a> · <a href="resume.html">Resume</a></span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
