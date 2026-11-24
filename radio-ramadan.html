@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -53,16 +53,27 @@
   </article>
 </div>
 
+<div class="wrap">
+  <div class="phase-strip" aria-label="Lifecycle at a glance">
+    <a class="ps-item" href="#discovery"><span class="lc-badge">01</span><span class="ps-name">Initiation</span><span class="ps-what">Discovery, business case</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#as-is"><span class="lc-badge">02</span><span class="ps-name">Planning</span><span class="ps-what">As-is advertising process</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#to-be"><span class="lc-badge">03</span><span class="ps-name">Design</span><span class="ps-what">To-be process, use cases, Trello prototype</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#stories"><span class="lc-badge">04</span><span class="ps-name">Delivery</span><span class="ps-what">19 user stories</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#tests"><span class="lc-badge">05</span><span class="ps-name">UAT</span><span class="ps-what">14 scenarios designed, not yet run</span><span class="chip pending">Designed, not run</span></a>
+    <a class="ps-item" href="#handover"><span class="lc-badge">06</span><span class="ps-name">Benefits</span><span class="ps-what">Baseline measures proposed</span><span class="chip muted">Pending pilot</span></a>
+  </div>
+</div>
+
 <nav class="subnav" aria-label="Sections">
   <div class="wrap">
     <a href="#discovery">Discovery</a>
-    <a href="#as-is">As-is process</a>
     <a href="#business-case">Business case</a>
+    <a href="#as-is">As-is process</a>
     <a href="#to-be">To-be process</a>
     <a href="#use-case">Use cases</a>
+    <a href="#prototype">Trello prototype</a>
     <a href="#stories">User stories</a>
     <a href="#tests">Test scenarios</a>
-    <a href="#prototype">Trello prototype</a>
     <a href="#handover">Handover</a>
   </div>
 </nav>
@@ -72,47 +83,32 @@
   <section id="discovery">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-initiation">01 Initiation</a>Discovery</p>
     <h2 class="section-title">Seven stages, five roles, many hand-offs</h2>
-    <p class="section-lede">Enquiries came in two ways: businesses phoning or emailing the advertising line, and the sales representative approaching local businesses. From there, each advert passed through seven stages.</p>
-    <div class="grid-2">
-      <div class="panel">
-        <h3>The journey of an advert</h3>
-        <ol style="margin:0;padding-left:20px;color:var(--ink-2)">
-          <li>Enquiry and sales conversation</li>
-          <li>Gather client requirements and brief</li>
-          <li>Write the script and approve it internally</li>
-          <li>Record and edit the audio</li>
-          <li>Client review and amendments</li>
-          <li>Create the broadcast order (dates and frequency)</li>
-          <li>Broadcast</li>
-        </ol>
-      </div>
-      <div class="panel">
-        <h3>What the team could not easily see</h3>
-        <ul class="ticks pains">
-          <li>Which enquiries had agreed to go ahead</li>
-          <li>Whether a script was waiting, in review or approved</li>
-          <li>Whether the client had signed off, or asked for changes</li>
-          <li>Deadlines that later stages depended on</li>
-          <li>Broadcast dates and frequency for each approved advert</li>
-        </ul>
-      </div>
+    <p class="section-lede">Enquiries arrived by phone, email or outbound sales, then passed through seven stages to broadcast.</p>
+    <p class="lc-label">The journey of an advert</p>
+    <ol class="lc-steps flow-steps">
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><span class="lc-step-n">1</span><span class="lc-step-t">Enquiry</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4"/><path d="M9 11h6M9 15h4"/></svg></span><span class="lc-step-n">2</span><span class="lc-step-t">Brief</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></svg></span><span class="lc-step-n">3</span><span class="lc-step-t">Script</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><span class="lc-step-n">4</span><span class="lc-step-t">Record</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg></span><span class="lc-step-n">5</span><span class="lc-step-t">Client review</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="lc-step-n">6</span><span class="lc-step-t">Broadcast order</span></li>
+      <li><span class="lc-step-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg></span><span class="lc-step-n">7</span><span class="lc-step-t">On air</span></li>
+    </ol>
+    <p class="lc-label">What the team couldn’t easily see</p>
+    <div class="tiles">
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7v.5"/><path d="M12 17h.01"/></svg></span><b>Who said yes</b><span>Which enquiries had agreed to go ahead.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13 7 4 4"/></svg></span><b>Script status</b><span>Waiting, in review or approved.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg></span><b>Client sign-off</b><span>Approved, or changes requested.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Deadlines</b><span>Dates that later stages depended on.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b>Broadcast details</b><span>Dates and frequency for each advert.</span></div>
     </div>
-    <p class="note" style="margin-top:14px;color:var(--ink-3);font-size:14.5px">Sources: discovery notes, the 2026 sales report and advertising tariff, and the team's existing RR Adverts 2026 Trello board. A sample card had an unticked approval checklist, which was early evidence that sign-off was not being recorded consistently.</p>
-  </section>
-
-  <section id="as-is">
-    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-planning">02 Planning</a>Current state</p>
-    <h2 class="section-title">How it worked before</h2>
-    <figure class="figure">
-      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/as-is-process.png" alt="As-is BPMN swimlane of the Radio Ramadan sponsorship and advertising process" loading="lazy"></div>
-      <figcaption><b>As-is sponsorship and advertising process (BPMN)</b>Four lanes: sponsor, sales and advertising, script and production, and broadcast scheduling. The Trello board tracked broad stages, but nothing checked that the brief was complete or that approvals were recorded before work moved on.</figcaption>
-    </figure>
+    <p class="note-line">Sources: discovery notes, the 2026 sales report and tariff, and the team’s Trello board. A sample card with an unticked approval checklist was early evidence that sign-off wasn’t being recorded.</p>
   </section>
 
   <section id="business-case">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-initiation">01 Initiation</a>Business case</p>
     <h2 class="section-title">Fix the tool they already use</h2>
-    <p class="section-lede">I compared three options on operational fit, expected benefit, effort and cost. No measured baseline existed, so I described the costs qualitatively and proposed measuring benefits during a pilot rather than claiming them up front.</p>
+    <p class="section-lede">Three options compared on fit, benefit, effort and cost, with benefits to be measured in a pilot rather than claimed.</p>
     <div class="options">
       <div class="option">
         <h4>1 · Keep the current approach</h4>
@@ -128,6 +124,15 @@
         <p>Could add reporting and automation, but needs selection, migration, training and subscriptions. The evidence did not justify it for one campaign.</p>
       </div>
     </div>
+  </section>
+
+  <section id="as-is">
+    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-planning">02 Planning</a>Current state</p>
+    <h2 class="section-title">How it worked before</h2>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/as-is-process.png" alt="As-is BPMN swimlane of the Radio Ramadan sponsorship and advertising process" loading="lazy"></div>
+      <figcaption><b>As-is sponsorship and advertising process (BPMN)</b>Four lanes: sponsor, sales and advertising, script and production, and broadcast scheduling. The Trello board tracked broad stages, but nothing checked that the brief was complete or that approvals were recorded before work moved on.</figcaption>
+    </figure>
   </section>
 
   <section id="to-be">
@@ -148,10 +153,32 @@
     </figure>
   </section>
 
+  <section id="prototype">
+    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-design">03 Design</a>Prototype</p>
+    <h2 class="section-title">A Trello board the team can adopt</h2>
+    <p class="section-lede">The proposed workflow as a working Trello board: one card per booking, moving across seven lists.</p>
+    <div class="panel">
+      <div class="board">
+        <div class="col"><h5>1 · New enquiry</h5><div>Channel: phone, email or outbound</div><div>Owner and next action</div></div>
+        <div class="col"><h5>2 · Brief and pricing</h5><div>Contact details and address</div><div>30 sec, message, tariff</div><div>Repeat-business approval</div></div>
+        <div class="col"><h5>3 · Script and production</h5><div>PM approves brief and script</div><div>Audio saved to OneDrive and backup</div></div>
+        <div class="col"><h5>4 · Internal approval</h5><div>Production Manager approval</div><div>Sales Manager approval</div></div>
+        <div class="col"><h5>5 · Client review</h5><div>OneDrive review link</div><div>Follow-up call, outcome recorded</div></div>
+        <div class="col"><h5>6 · Ready to schedule</h5><div>Order signed by both managers</div><div>Day or night, dates, frequency</div></div>
+        <div class="col"><h5>7 · Scheduled</h5><div>Placed in five-minute break</div><div>Conflicts resolved, sequence logged</div></div>
+      </div>
+      <p class="note">Rule on every card: the Production Manager updates it after each interaction, revision and progress change, with the outcome, current status and next action. <a href="https://trello.com/b/SWzuSG7S/radio-ramadan-adverts-sponsorship-workflow">Open the prototype board in Trello →</a></p>
+    </div>
+    <figure class="figure" style="margin-top:22px">
+      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/trello-board.png" alt="Wireframe of the proposed RR Adverts 2026 Trello board" loading="lazy"></div>
+      <figcaption><b>Board wireframe</b>Designed in Draw.io before building the board, so the team could agree the lists and card contents first.</figcaption>
+    </figure>
+  </section>
+
   <section id="stories">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-delivery">04 Delivery</a>User stories</p>
     <h2 class="section-title">19 user stories with acceptance criteria</h2>
-    <p class="section-lede">Every story traces back to the use case diagram and the discovery notes, and each lists the stories it depends on. Business rules confirmed with the team, such as 30-second adverts, five-minute ad breaks and two-manager sign-off, are written into the acceptance criteria.</p>
+    <p class="section-lede">Every story traces to the use cases and discovery notes, with confirmed business rules written into the criteria.</p>
     <div class="filters" data-for="rr-stories">
       <button data-filter="all" aria-pressed="true">All 19</button>
       <button data-filter="e1" aria-pressed="false">Enquiry and booking</button>
@@ -159,7 +186,7 @@
       <button data-filter="e3" aria-pressed="false">Scheduling and oversight</button>
     </div>
     <div class="table-scroll">
-      <table id="rr-stories">
+      <table id="rr-stories" data-collapse="6">
         <thead><tr><th>ID</th><th>User story</th><th>Acceptance criteria</th><th>Priority</th></tr></thead>
         <tbody>
           <tr data-group="e1"><td class="id">1.1</td><td>As a <b>sponsor</b>, I want to submit an advertising or sponsorship enquiry, so that Radio Ramadan can follow it up.</td><td><ul class="ac"><li>Staff can access a record of each enquiry</li><li>It shows advertising, sponsorship or both</li></ul></td><td><span class="chip">Must</span></td></tr>
@@ -189,7 +216,7 @@
   <section id="tests">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-uat">05 UAT</a>Test design</p>
     <h2 class="section-title">14 test scenarios, traced to the stories</h2>
-    <p class="section-lede">I wrote positive, negative and control tests, including checks that adverts cannot reach the client or the schedule before the right approvals are in place. They are designed and ready to run once the station agrees the operational setup.</p>
+    <p class="section-lede">Positive, negative and control tests, including checks that nothing reaches the client or the schedule without the right approvals.</p>
     <div class="filters" data-for="rr-tests">
       <button data-filter="all" aria-pressed="true">All 14</button>
       <button data-filter="pos" aria-pressed="false">Positive</button>
@@ -197,7 +224,7 @@
       <button data-filter="gate" aria-pressed="false">Approval gates</button>
     </div>
     <div class="table-scroll">
-      <table id="rr-tests">
+      <table id="rr-tests" data-collapse="6">
         <thead><tr><th>Test</th><th>Stories</th><th>Scenario</th><th>Expected result</th><th>Type</th></tr></thead>
         <tbody>
           <tr data-group="pos"><td class="id">TC-01</td><td>1.1, 1.2</td><td>Record a complete advertising enquiry</td><td>All business, contact and brief details saved on one booking</td><td><span class="chip">Positive</span></td></tr>
@@ -219,32 +246,10 @@
     </div>
   </section>
 
-  <section id="prototype">
-    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-design">03 Design</a>Prototype</p>
-    <h2 class="section-title">A Trello board the team can adopt</h2>
-    <p class="section-lede">I built the proposed workflow as a working Trello board in a test account. Each booking is one card that moves across seven lists, with a checklist that records every approval.</p>
-    <div class="panel">
-      <div class="board">
-        <div class="col"><h5>1 · New enquiry</h5><div>Channel: phone, email or outbound</div><div>Owner and next action</div></div>
-        <div class="col"><h5>2 · Brief and pricing</h5><div>Contact details and address</div><div>30 sec, message, tariff</div><div>Repeat-business approval</div></div>
-        <div class="col"><h5>3 · Script and production</h5><div>PM approves brief and script</div><div>Audio saved to OneDrive and backup</div></div>
-        <div class="col"><h5>4 · Internal approval</h5><div>Production Manager approval</div><div>Sales Manager approval</div></div>
-        <div class="col"><h5>5 · Client review</h5><div>OneDrive review link</div><div>Follow-up call, outcome recorded</div></div>
-        <div class="col"><h5>6 · Ready to schedule</h5><div>Order signed by both managers</div><div>Day or night, dates, frequency</div></div>
-        <div class="col"><h5>7 · Scheduled</h5><div>Placed in five-minute break</div><div>Conflicts resolved, sequence logged</div></div>
-      </div>
-      <p class="note">Rule on every card: the Production Manager updates it after each interaction, revision and progress change, with the outcome, current status and next action. <a href="https://trello.com/b/SWzuSG7S/radio-ramadan-adverts-sponsorship-workflow">Open the prototype board in Trello →</a></p>
-    </div>
-    <figure class="figure" style="margin-top:22px">
-      <div class="img-wrap" data-zoom><img src="assets/radio-ramadan/trello-board.png" alt="Wireframe of the proposed RR Adverts 2026 Trello board" loading="lazy"></div>
-      <figcaption><b>Board wireframe</b>Designed in Draw.io before building the board, so the team could agree the lists and card contents first.</figcaption>
-    </figure>
-  </section>
-
   <section id="handover">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-benefits">06 Benefits</a>Handover and lessons</p>
     <h2 class="section-title">What the station needs to decide next</h2>
-    <p class="section-lede">I closed the analysis with an end-of-project report and a handover pack. I was careful to separate what had been agreed from what was still a proposal, and claimed no benefits that hadn't been measured.</p>
+    <p class="section-lede">An end-of-project report and handover pack that separate what was agreed from what is still a proposal.</p>
     <div class="table-scroll">
       <table>
         <thead><tr><th>Ref</th><th>Open action</th><th>Proposed owner</th><th>Status</th></tr></thead>
@@ -277,6 +282,6 @@
     <span><a href="https://www.linkedin.com/in/akhans">LinkedIn</a> · <a href="resume.html">Resume</a></span>
   </div>
 </footer>
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 </body>
 </html>

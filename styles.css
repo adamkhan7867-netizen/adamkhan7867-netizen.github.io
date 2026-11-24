@@ -298,6 +298,26 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
 .role li { margin-bottom: 5px; }
 .skills { display: flex; flex-wrap: wrap; gap: 8px; }
 
+/* Case study: lifecycle strip, tiles, collapsible tables */
+.phase-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin: 22px 0 26px; }
+.ps-item { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; background: var(--surface); border-radius: 14px; padding: 14px 14px 16px; box-shadow: var(--shadow); color: inherit; border: 1.5px solid transparent; transition: border-color .15s, transform .15s; }
+.ps-item:hover { border-color: var(--brand); transform: translateY(-2px); text-decoration: none; }
+.ps-item .lc-badge { width: 30px; height: 30px; font-size: 13px; }
+.ps-name { font-weight: 700; font-size: 15.5px; }
+.ps-what { font-size: 13.5px; color: var(--ink-2); line-height: 1.4; flex: 1; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.tile { background: var(--surface); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px; }
+.tile-ic { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--fail-soft); color: var(--fail); margin-bottom: 4px; }
+.tile b { font-size: 15.5px; }
+.tile span:last-child { font-size: 14px; color: var(--ink-2); line-height: 1.45; }
+.flow-steps { margin-bottom: 26px; }
+.flow-steps li { background: var(--surface); box-shadow: var(--shadow); border-color: transparent; }
+.flow-steps .lc-step-n::before { content: ""; }
+.note-line { color: var(--ink-3); font-size: 14.5px; margin: 6px 0 0; }
+.show-all { font: inherit; font-size: 14.5px; font-weight: 600; color: var(--brand); background: var(--brand-soft); border: 0; border-radius: 999px; padding: 8px 16px; margin-top: 12px; cursor: pointer; }
+.show-all:hover { background: var(--brand); color: #fff; }
+table[data-collapsed="true"] tbody tr.over { display: none; }
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--ink-3); font-size: 15px; background: var(--surface); }
 .site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -310,6 +330,7 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
   .lc-steps { grid-auto-flow: row; grid-template-columns: repeat(2, 1fr); }
   .lc-steps li::after { display: none; }
   .lc-mid { grid-template-columns: 1fr; }
+  .phase-strip { grid-template-columns: repeat(3, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
@@ -331,6 +352,8 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
   .lc-steps li:not(:last-child)::after { display: block; right: auto; left: 33px; top: auto; bottom: -11px; transform: rotate(135deg); }
   .lc-step-n { display: none; }
   .lc-proof { grid-template-columns: 1fr; }
+  .phase-strip { grid-template-columns: repeat(2, 1fr); }
+  .tiles { grid-template-columns: 1fr; }
   .matrix { grid-template-columns: 24px 1fr; grid-template-rows: auto auto auto; }
   .matrix .q { grid-column: 2; }
   .matrix .ylab { grid-row: 1 / 3; }
@@ -340,7 +363,8 @@ tr.epic td { background: var(--brand-soft); color: var(--brand-ink); font-weight
 
 /* Print / PDF */
 @media print {
-  .site-header, .subnav, .nav-toggle, .btns, .filters, .lightbox, .site-footer { display: none !important; }
+  .site-header, .subnav, .nav-toggle, .btns, .filters, .lightbox, .site-footer, .show-all { display: none !important; }
+  table[data-collapsed="true"] tbody tr.over { display: table-row !important; }
   body { background: #fff; font-size: 12pt; }
   .hero { background: none; padding: 0 0 12pt; }
   .lift { margin-top: 0; }

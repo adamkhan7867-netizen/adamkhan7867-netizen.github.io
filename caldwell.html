@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -54,15 +54,26 @@
   </article>
 </div>
 
+<div class="wrap">
+  <div class="phase-strip" aria-label="Lifecycle at a glance">
+    <a class="ps-item" href="#problem"><span class="lc-badge">01</span><span class="ps-name">Initiation</span><span class="ps-what">Problem, stakeholders, business case</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#as-is"><span class="lc-badge">02</span><span class="ps-name">Planning</span><span class="ps-what">As-is sales process</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#to-be"><span class="lc-badge">03</span><span class="ps-name">Design</span><span class="ps-what">Use cases, 13 wireframes, 7 NFRs</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#requirements"><span class="lc-badge">04</span><span class="ps-name">Delivery</span><span class="ps-what">9 user stories, 27 requirements</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#uat"><span class="lc-badge">05</span><span class="ps-name">UAT</span><span class="ps-what">35 tests run, 27 passed</span><span class="chip pass">Done</span></a>
+    <a class="ps-item" href="#handover"><span class="lc-badge">06</span><span class="ps-name">Benefits</span><span class="ps-what">Handed over; 18% uplift still a target</span><span class="chip pending">In progress</span></a>
+  </div>
+</div>
+
 <nav class="subnav" aria-label="Sections">
   <div class="wrap">
     <a href="#problem">Problem</a>
     <a href="#stakeholders">Stakeholders</a>
-    <a href="#as-is">As-is process</a>
     <a href="#business-case">Business case</a>
+    <a href="#as-is">As-is process</a>
     <a href="#to-be">To-be</a>
-    <a href="#requirements">User stories</a>
     <a href="#wireframes">Wireframes</a>
+    <a href="#requirements">User stories</a>
     <a href="#uat">UAT</a>
     <a href="#handover">Handover</a>
   </div>
@@ -73,22 +84,20 @@
   <section id="problem">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-initiation">01 Initiation</a>Problem</p>
     <h2 class="section-title">Spreadsheets were holding sales back</h2>
-    <p class="section-lede">The client earns from two streams, classroom courses and professional exam testing. Neither had a single view of the customer.</p>
-    <div class="panel">
-      <ul class="ticks pains">
-        <li><b>Inaccurate and duplicated data.</b> Manual entry led to out-of-date and duplicate records.</li>
-        <li><b>No automation.</b> Every follow-up was typed and sent by hand, so leads went cold.</li>
-        <li><b>No central view.</b> Interactions sat in separate files with no dashboard for managers.</li>
-        <li><b>Could not scale.</b> The contact list was set to grow by around 28% within the year.</li>
-        <li><b>Security and compliance risk.</b> Customer data was saved in many places with no control.</li>
-      </ul>
+    <p class="section-lede">Neither of the client’s two income streams, courses and exam testing, had a single view of the customer.</p>
+    <div class="tiles">
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5"/><path d="M12 17.5h.01"/></svg></span><b>Inaccurate, duplicated data</b><span>Manual entry created out-of-date and duplicate records.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><b>No automation</b><span>Every follow-up was typed by hand, so leads went cold.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span><b>No central view</b><span>Interactions sat in separate files, with no dashboard.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><b>Couldn’t scale</b><span>Contacts were set to grow by about 28% within the year.</span></div>
+      <div class="tile"><span class="tile-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><b>Security risk</b><span>Customer data was saved in many places with no control.</span></div>
     </div>
   </section>
 
   <section id="stakeholders">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-initiation">01 Initiation</a>Stakeholders</p>
     <h2 class="section-title">Who needed to be involved, and how</h2>
-    <p class="section-lede">I built a stakeholder register and an influence and interest grid from the project governance, the process map and conversations with the sponsor, project lead, sales and marketing staff, and the in-house CRM team.</p>
+    <p class="section-lede">Built from project governance and conversations with each group, then flagged for validation with the project lead and sponsor.</p>
     <div class="panel">
       <div class="matrix">
         <div class="ylab">Interest ↑</div>
@@ -100,16 +109,6 @@
       </div>
       <p class="note">Ratings are my analyst assessment and were flagged for validation with the project lead and sponsor. I also flagged that the landing-page technical owner had not been consulted, which is a real integration risk.</p>
     </div>
-  </section>
-
-  <section id="as-is">
-    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-planning">02 Planning</a>Current state</p>
-    <h2 class="section-title">How an enquiry became a sale</h2>
-    <p class="section-lede">I mapped the as-is sales process across three lanes: the customer, the client's head office and the local training centre.</p>
-    <figure class="figure">
-      <div class="img-wrap" data-zoom><img src="assets/caldwell/as-is-process.png" alt="As-is BPMN swimlane of the client sales process" loading="lazy"></div>
-      <figcaption><b>As-is sales process (BPMN)</b>Every enquiry passed through a spreadsheet twice, once at head office and again at the local centre. If a call went unanswered, the only fallback was an email asking the customer to call back. Three of the four end points are lost sales.</figcaption>
-    </figure>
   </section>
 
   <section id="business-case">
@@ -136,6 +135,16 @@
     </div>
   </section>
 
+  <section id="as-is">
+    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-planning">02 Planning</a>Current state</p>
+    <h2 class="section-title">How an enquiry became a sale</h2>
+    <p class="section-lede">I mapped the as-is sales process across three lanes: the customer, the client's head office and the local training centre.</p>
+    <figure class="figure">
+      <div class="img-wrap" data-zoom><img src="assets/caldwell/as-is-process.png" alt="As-is BPMN swimlane of the client sales process" loading="lazy"></div>
+      <figcaption><b>As-is sales process (BPMN)</b>Every enquiry passed through a spreadsheet twice, once at head office and again at the local centre. If a call went unanswered, the only fallback was an email asking the customer to call back. Three of the four end points are lost sales.</figcaption>
+    </figure>
+  </section>
+
   <section id="to-be">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-design">03 Design</a>Future state</p>
     <h2 class="section-title">What the CRM needs to do</h2>
@@ -145,12 +154,33 @@
     </figure>
   </section>
 
+  <section id="wireframes">
+    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-design">03 Design</a>Wireframes</p>
+    <h2 class="section-title">13 screens for the new landing page and student area</h2>
+    <p class="section-lede">Thirteen screens so stakeholders could review the journey before any build. Click one to enlarge it.</p>
+    <div class="gallery">
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-1.png" alt="Wireframe: Homepage" loading="lazy"><span>Homepage</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-2.png" alt="Wireframe: About" loading="lazy"><span>About</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-3.png" alt="Wireframe: FAQ" loading="lazy"><span>FAQ</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-4.png" alt="Wireframe: Contact us" loading="lazy"><span>Contact us</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-5.png" alt="Wireframe: Contact us, sent" loading="lazy"><span>Contact us, sent</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-6.png" alt="Wireframe: Login" loading="lazy"><span>Login</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-7.png" alt="Wireframe: Forgot password" loading="lazy"><span>Forgot password</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-8.png" alt="Wireframe: Forgot password, sent" loading="lazy"><span>Forgot password, sent</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-9.png" alt="Wireframe: Register" loading="lazy"><span>Register</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-10.png" alt="Wireframe: Registration confirmed" loading="lazy"><span>Registration confirmed</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-11.png" alt="Wireframe: Booking date and time, email confirmation" loading="lazy"><span>Booking confirmation</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-12.png" alt="Wireframe: Course page" loading="lazy"><span>Course page</span></button>
+      <button data-zoom><img src="assets/caldwell/wireframes/wf-13.png" alt="Wireframe: Course module" loading="lazy"><span>Course module</span></button>
+    </div>
+  </section>
+
   <section id="requirements">
     <p class="eyebrow"><a class="phase-tag" href="index.html#lc-delivery">04 Delivery</a>User stories</p>
     <h2 class="section-title">User stories with acceptance criteria</h2>
-    <p class="section-lede">Nine stories across three epics, written from the point of view of each user group. All nine were prioritised as Must Have for the first release.</p>
+    <p class="section-lede">Nine stories across three epics, each written for a real user group.</p>
     <div class="table-scroll">
-      <table>
+      <table data-collapse="6">
         <thead><tr><th>ID</th><th>User story</th><th>Acceptance criteria</th><th>Priority</th></tr></thead>
         <tbody>
           <tr class="epic"><td colspan="4">Accounts and contact management</td></tr>
@@ -167,27 +197,6 @@
           <tr><td class="id">US-09</td><td>As a <b>finance administrator</b>, I want monthly revenue reports by course and centre, so that I can reconcile finances.</td><td><ul class="ac"><li>Filter by date range, course and centre</li><li>Shows totals in tables and charts</li><li>Flags unusually low revenue and missing payments</li></ul></td><td><span class="chip">Must</span></td></tr>
         </tbody>
       </table>
-    </div>
-  </section>
-
-  <section id="wireframes">
-    <p class="eyebrow"><a class="phase-tag" href="index.html#lc-design">03 Design</a>Wireframes</p>
-    <h2 class="section-title">13 screens for the new landing page and student area</h2>
-    <p class="section-lede">I wireframed the customer journey from the homepage through enquiry, registration and login to the course and module pages, so stakeholders could review the experience before any build. Click a screen to enlarge it.</p>
-    <div class="gallery">
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-1.png" alt="Wireframe: Homepage" loading="lazy"><span>Homepage</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-2.png" alt="Wireframe: About" loading="lazy"><span>About</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-3.png" alt="Wireframe: FAQ" loading="lazy"><span>FAQ</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-4.png" alt="Wireframe: Contact us" loading="lazy"><span>Contact us</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-5.png" alt="Wireframe: Contact us, sent" loading="lazy"><span>Contact us, sent</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-6.png" alt="Wireframe: Login" loading="lazy"><span>Login</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-7.png" alt="Wireframe: Forgot password" loading="lazy"><span>Forgot password</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-8.png" alt="Wireframe: Forgot password, sent" loading="lazy"><span>Forgot password, sent</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-9.png" alt="Wireframe: Register" loading="lazy"><span>Register</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-10.png" alt="Wireframe: Registration confirmed" loading="lazy"><span>Registration confirmed</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-11.png" alt="Wireframe: Booking date and time, email confirmation" loading="lazy"><span>Booking confirmation</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-12.png" alt="Wireframe: Course page" loading="lazy"><span>Course page</span></button>
-      <button data-zoom><img src="assets/caldwell/wireframes/wf-13.png" alt="Wireframe: Course module" loading="lazy"><span>Course module</span></button>
     </div>
   </section>
 
@@ -212,7 +221,7 @@
         <button data-filter="lead" aria-pressed="false">Leads</button>
       </div>
       <div class="table-scroll">
-        <table id="cat">
+        <table id="cat" data-collapse="6">
           <thead><tr><th>ID</th><th>Requirement</th><th>Acceptance criteria and result</th></tr></thead>
           <tbody>
             <tr data-group="contact"><td class="id">1.1</td><td>Marketer sends automated email campaigns</td><td><span class="chip pass">Pass</span> Issue campaigns · <span class="chip pass">Pass</span> Track open rate · <span class="chip pass">Pass</span> Timed follow-ups</td></tr>
@@ -278,6 +287,6 @@
     <span><a href="https://www.linkedin.com/in/akhans">LinkedIn</a> · <a href="resume.html">Resume</a></span>
   </div>
 </footer>
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 </body>
 </html>

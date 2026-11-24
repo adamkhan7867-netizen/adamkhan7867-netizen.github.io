@@ -135,3 +135,31 @@ document.querySelectorAll('[data-lifecycle]').forEach(lc => {
   if (document.readyState === 'complete') fromHash();
   else window.addEventListener('load', fromHash);
 });
+
+// Long tables: show the first rows with a "Show all" button
+document.querySelectorAll('table[data-collapse]').forEach(table => {
+  const n = parseInt(table.dataset.collapse, 10);
+  const rows = [...table.querySelectorAll('tbody tr')];
+  if (rows.length <= n + 1) return;
+  rows.forEach((tr, i) => { if (i >= n) tr.classList.add('over'); });
+  table.dataset.collapsed = 'true';
+  const btn = document.createElement('button');
+  btn.className = 'show-all';
+  btn.type = 'button';
+  const label = () => table.dataset.collapsed === 'true' ? `Show all ${rows.filter(r => !r.classList.contains('epic')).length} rows` : 'Show fewer';
+  btn.textContent = label();
+  btn.setAttribute('aria-expanded', 'false');
+  btn.addEventListener('click', () => {
+    const open = table.dataset.collapsed === 'true';
+    table.dataset.collapsed = open ? 'false' : 'true';
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = label();
+  });
+  (table.closest('.table-scroll') || table).after(btn);
+  // A filter shows every matching row
+  const filters = document.querySelector(`.filters[data-for="${table.id}"]`);
+  if (filters) filters.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (b && b.dataset.filter !== 'all' && table.dataset.collapsed === 'true') btn.click();
+  });
+});
